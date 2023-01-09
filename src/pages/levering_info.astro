@@ -1,0 +1,141 @@
+---
+import "../styles/global.css";
+import Button from "../components/Button.astro";
+import Banner from "../components/Banner.astro";
+---
+
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leverings info</title>
+  </head>
+  <Banner />
+  <body class="bg-beige300 overflow-x-hidden">
+    <main class="mx-space30 sm:mx-spaceMarginx mt-spaceMarginTop mb-space90">
+      <div class="w-full flex justify-center">
+        <img
+          class="mb-space160"
+          src="../img/p_tre.svg"
+          alt="du er på siden med kontaktinfo"
+        />
+      </div>
+      <h1
+        class="lg:text-deskH1 text-mobileH1 font-bold font-text pb-space10 text-center"
+      >
+        Leverings info
+      </h1>
+      <!-- inmput felter  -->
+      <section class="grid place-content-center">
+        <form class="w-[380px]" action="">
+          <!-- fornavn  -->
+          <div class="mt-space20">
+            <label
+              for="fornavn"
+              class="block mb-[4px] text-sm font-medium text-black500"
+            >
+              Fornavn<span class="text-red400">*</span>
+            </label>
+            <input
+              type="text"
+              inputmode="text"
+              id="fornavn"
+              class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
+              placeholder="Jean-Pierre"
+            />
+          </div>
+
+          <!-- efternavn  -->
+          <div class="mt-space20">
+            <label
+              for="efternavn"
+              class="block mb-[4px] text-sm font-medium text-black500"
+              >Efternavn<span class="text-red400">*</span>
+            </label>
+            <input
+              type="text"
+              inputmode="text"
+              id="efternavn"
+              class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
+              placeholder="Jørgensen"
+            />
+          </div>
+
+          <!-- land  -->
+          <div class="mt-space20">
+            <label
+              for="land"
+              class="block mb-[4px] text-sm font-medium text-black500"
+              >Land<span class="text-red400">*</span>
+            </label>
+            <input
+              type="text"
+              inputmode="text"
+              id="land"
+              class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
+              placeholder="Danmark"
+            />
+          </div>
+
+          <!-- adresse  -->
+          <div class="mt-space20">
+            <label
+              for="adresse"
+              class="block mb-[4px] text-sm font-medium text-black500"
+              >Adresse<span class="text-red400">*</span>
+            </label>
+            <input
+              type="text"
+              inputmode="text"
+              id="adresse"
+              class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
+              placeholder="Eks. veksøvej 12, st. th"
+            />
+          </div>
+
+          <!-- By  -->
+          <div class="mt-space20">
+            <label
+              for="by"
+              class="block mb-[4px] text-sm font-medium text-black500"
+              >By<span class="text-red400">*</span>
+            </label>
+            <input
+              type="text"
+              inputmode="text"
+              id="by"
+              class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
+              placeholder="Eks. Vanløse"
+            />
+          </div>
+
+          <!-- postnummer  -->
+          <div class="mt-space20">
+            <label
+              for="postnummer"
+              class="block mb-[4px] text-sm font-medium text-black500"
+              >Postnummer<span class="text-red400">*</span>
+            </label>
+            <input
+              type="text"
+              inputmode="numeric"
+              id="postnummer"
+              class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
+              placeholder="Eks. 2720"
+            />
+          </div>
+        </form>
+        <div class="pt-space20">
+          <Button
+            variant="primary"
+            href="/note_levering"
+            knapTekst="Godkend"
+            kurv={false}
+          />
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

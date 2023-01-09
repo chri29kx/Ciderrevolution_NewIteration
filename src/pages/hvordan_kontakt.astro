@@ -1,0 +1,149 @@
+---
+import "../styles/global.css";
+import Button from "../components/Button.astro";
+import Banner from "../components/Banner.astro";
+---
+
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontaktoplysning</title>
+  </head>
+  <Banner />
+  <body class="bg-beige300 overflow-x-hidden">
+    <main
+      class="mx-space30 sm:mx-spaceMarginx mt-spaceMarginTop grid place-content-center mb-space90"
+    >
+      <div class="w-full flex justify-center">
+        <img
+          class="mb-space160"
+          src="../img/p_et.svg"
+          alt="du er på siden med kontaktinfo"
+        />
+      </div>
+      <h1
+        class="lg:text-deskH1 text-mobileH1 font-bold font-text pb-space10 text-center"
+      >
+        Hvordan vil du kontaktes?
+      </h1>
+      <p class="font-text text-black500 text-mobileP text-center">
+        Du kan vælge flere valgmuligheder
+      </p>
+
+      <div
+        class="md:flex md:place-content-center md:gap-space80 md:pt-space160"
+      >
+        <!-- Mail  -->
+        <div class="pt-space40 flex justify-center">
+          <div class="hover:translate-y-[-10px] ease-in-out duration-200">
+            <div
+              id="mail_check"
+              tabindex="1"
+              class="w-[170px] h-[170px] grid justify-center hover:cursor-pointer shadow-md rounded-cornerRound"
+            >
+              <img src="../img/mail.svg" alt="" />
+              <p class="grid justify-center font-medium">Mail</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Telefon -->
+        <div class="pt-space40 flex justify-center">
+          <div class="hover:translate-y-[-10px] ease-in-out duration-200">
+            <div
+              tabindex="2"
+              id="tel_check"
+              class="w-[170px] h-[170px] grid justify-center hover:cursor-pointer bg-beige300 shadow-md rounded-cornerRound"
+            >
+              <img src="../img/tel.svg" alt="" />
+              <p class="grid justify-center font-medium">Sms</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="kontakt"
+        class="btn_kontakt w-full flex flex-col invisible items-center pt-space80"
+      >
+        <Button
+          variant="primary"
+          href="/vaelglevering"
+          knapTekst="Levering"
+          kurv={false}
+        />
+      </div>
+      <p
+        class="font-text text-xscopy text-black500 text-center pt-space20 md:pt-space160"
+      >
+        Vi kontakter dig kun i forbindelse med levering af lækker cider
+      </p>
+    </main>
+    <script>
+      //checkbox background hvordan kontakt
+      document
+        .getElementById("mail_check")
+        .addEventListener("click", togglebackground);
+      document
+        .getElementById("tel_check")
+        .addEventListener("click", togglebackground2);
+
+      function togglebackground() {
+        console.log("hejsa");
+        let divMail = document.getElementById("mail_check");
+        let kontakt = document.getElementById("kontakt");
+
+        if (divMail.style.backgroundColor === "") {
+          divMail.style.backgroundColor = "#D5E8DA";
+          kontakt.classList.add("active123");
+        } else {
+          divMail.style.backgroundColor = "";
+          kontakt.classList.remove("active123");
+        }
+      }
+
+      function togglebackground2() {
+        console.log("hejsa2");
+        let divTel = document.getElementById("tel_check");
+
+        if (divTel.style.backgroundColor === "") {
+          divTel.style.backgroundColor = "#D5E8DA";
+        } else {
+          divTel.style.backgroundColor = "";
+        }
+      }
+
+      // denne kode er laant fra W3schools ( vi bruger den til a11y) for at kunne klikke med enter på mail el sms
+      // https://www.w3schools.com/howto/howto_js_trigger_button_enter.asp
+      // Get the input field
+      var input = document.getElementById("mail_check");
+
+      // Execute a function when the user presses a key on the keyboard
+      input.addEventListener("keypress", function (event) {
+        // If the user presses the "Enter" key on the keyboard
+        if (event.key === "Enter") {
+          // Cancel the default action, if needed
+          event.preventDefault();
+          // Trigger the button element with a click
+          document.getElementById("mail_check").click();
+        }
+      });
+
+      // Get the input field
+      var input = document.getElementById("tel_check");
+
+      // Execute a function when the user presses a key on the keyboard
+      input.addEventListener("keypress", function (event) {
+        // If the user presses the "Enter" key on the keyboard
+        if (event.key === "Enter") {
+          // Cancel the default action, if needed
+          event.preventDefault();
+          // Trigger the button element with a click
+          document.getElementById("tel_check").click();
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import "../styles/global.css";
+import Button from "../components/Button.astro";
+---
+
+<MainLayout>
+  <h1
+    class="lg:text-deskH1 text-mobileH1 font-bold font-text pb-space40 lg:text-center"
+  >
+    Opret bruger eller login
+  </h1>
+  <div class="pt-space40 pb-space160 md:grid md:grid-cols-2 md:gap-space80">
+    <div
+      class="md:grid md:place-content-center md:border-r-2 md:border-green300"
+    >
+      <div class="pb-space15">
+        <Button
+          variant="primary"
+          href="/opret_bruger"
+          knapTekst="Opret bruger"
+          kurv={false}
+        />
+      </div>
+      <a
+        class="text-link underline font-medium text-blue300"
+        href="/opret_bruger">Fortsæt som gæst</a
+      >
+    </div>
+    <!-- 2fr grid  -->
+    <div class="">
+      <h2
+        class="lg:text-deskH3 text-mobileH3 font-medium font-text mt-space50 md:mt-[0] pb-space15"
+      >
+        Login
+      </h2>
+      <form action="">
+        <!-- email  -->
+        <div class="mt-space20">
+          <label
+            for="email"
+            class="block mb-[4px] text-sm font-medium text-black500"
+            >Email</label
+          >
+          <input
+            type="text"
+            id="email"
+            inputmode="email"
+            class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
+            placeholder="C-revolution@mail.dk"
+          />
+        </div>
+        <!-- password  -->
+        <div class="mt-space20">
+          <label
+            for="password"
+            class="block mb-[4px] text-sm font-medium text-black500"
+            >Password</label
+          >
+          <input
+            type="password"
+            id="password"
+            inputmode="text"
+            class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
+            placeholder="•••••••••"
+            required
+          />
+          <!-- checkboks  -->
+          <div class="pt-space15">
+            <input
+              id="checkboks"
+              type="checkbox"
+              class="w-4 h-4 text-black500 bg-gray-100 rounded-[5px] border-grey300 focus:ring-black500 focus:border-black500"
+            />
+            <label
+              for="checkboks"
+              class="ml-2 text-sm font-medium text-black500"
+              >Husk mig til næste gang!</label
+            >
+          </div>
+        </div>
+      </form>
+
+      <div class="pt-space15">
+        <Button
+          variant="primary"
+          href="/hvordan_kontakt"
+          knapTekst="Login"
+          kurv={false}
+        />
+      </div>
+      <div class="pt-space15">
+        <a
+          class="text-link underline font-medium text-blue300 pt-space15"
+          href="">Glemt adgangskode?</a
+        >
+      </div>
+    </div>
+  </div>
+</MainLayout>

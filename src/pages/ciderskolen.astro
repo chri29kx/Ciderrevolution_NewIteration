@@ -1,0 +1,52 @@
+---
+// Component Imports
+import Card from "../components/Card.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import "../styles/global.css";
+import Cookie from "../components/Cookie.astro";
+import Overatten from "../components/Overatten.astro";
+import Button from "../components/Button.astro";
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<MainLayout title="Ciderskolen">
+  <div class="sm:grid lg:grid-cols-2 flex flex-col">
+    <div class="gap-space25 flex flex-col">
+      <h1
+        class="text-mobileH1 lg:text-deskH1 font-text font-bold text-black600"
+      >
+        Ciderskolen
+      </h1>
+      <p class="max-w-[550px] font-text text-mobileP">
+        Lær alt om, hvordan du laver cider, dyk ned ciderens forunderlige
+        historie eller læs vores mange spændende blogindlæg om alt, hvad der
+        hedder cider.
+      </p>
+      <div class="flex flex-col gap-space25 w-full">
+        <Button
+          variant="primary_ciderskolen"
+          knapTekst="Om cider"
+          kurv={false}
+        />
+
+        <Button
+          href="/lavcider"
+          variant="primary_ciderskolen"
+          knapTekst="Lav din egen cider"
+          kurv={false}
+        />
+
+        <Button variant="primary_ciderskolen" knapTekst="Blog" kurv={false} />
+      </div>
+    </div>
+    <div class="lg:flex items-center justify-center w-full hidden">
+      <img
+        class="max-w-[270px]"
+        src="../img/skilt.svg"
+        alt="skilt dekorativt"
+      />
+    </div>
+  </div>
+</MainLayout>

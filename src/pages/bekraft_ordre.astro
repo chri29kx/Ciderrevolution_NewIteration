@@ -1,0 +1,84 @@
+---
+import "../styles/global.css";
+import Button from "../components/Button.astro";
+import Banner from "../components/Banner.astro";
+---
+
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bobler på vej!</title>
+  </head>
+  <Banner />
+  <body class="bg-beige300 overflow-x-hidden">
+    <main
+      class="mx-space30 sm:mx-spaceMarginx mt-spaceMarginTop grid place-content-center mb-space90"
+    >
+      <!-- h1  -->
+      <h1
+        class="lg:text-deskH1 text-mobileH1 font-bold font-text pb-space10 text-center"
+      >
+        Tak fordi du handler hos Ciderrevolutionen!
+      </h1>
+      <section
+        class="lg:flex lg:gap-space40 lg:place-content-center lg:items-center"
+      >
+        <div>
+          <!-- ikon  -->
+          <div class="pt-space40 flex justify-center">
+            <img src="../img/pagne.svg" alt="" />
+          </div>
+        </div>
+        <div class="">
+          <!-- h2  -->
+          <h2
+            class="lg:text-left lg:text-deskP text-mobileP font-medium font-text pb-space10 text-center pt-space40"
+          >
+            Dine bobler er på vej!!
+          </h2>
+          <p
+            class="lg:text-left lg:text-deskP text-mobileP font-medium font-text pb-space10 text-center"
+          >
+            Du modtager en bekræftelse på mail el. sms
+          </p>
+          <p
+            class="lg:text-left lg:text-deskP text-mobileP font-medium font-text pb-space10 text-center"
+          >
+            Du modtager din pakke inden for 1-3 hverdage
+          </p>
+
+          <p
+            class="lg:text-left font-text text-grey300 text-mobileP text-center pt-space15"
+          >
+            Mvh. Cider-revolutionen
+          </p>
+          <h2
+            class="lg:pt-space20 lg:text-left lg:text-deskP text-mobileP text-grey400 font-medium font-text pb-space10 text-center"
+          >
+            Ordrenummer: #42331
+          </h2>
+        </div>
+      </section>
+      <div class="pt-space40 flex justify-center">
+        <Button
+          variant="primary"
+          href="/"
+          knapTekst="Tilbage til forside"
+          kurv={false}
+        />
+      </div>
+      <p class="flex justify-center pt-space15 lg:pt-space40">
+        Vi håber du vil anmelde din oplevelse hos os på
+        <a
+          class="text-link underline font-medium text-blue300 pl-[4px] pt-[2px]"
+          href="https://dk.trustpilot.com/evaluate/ciderrevolution.dk"
+        >
+          trustpilot!</a
+        >
+      </p>
+    </main>
+  </body>
+</html>

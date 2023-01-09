@@ -1,0 +1,31 @@
+---
+const { variant, knapTekst, kurv } = Astro.props;
+---
+
+<button
+  data-variant={variant}
+  class="kategoriButton bg-slate-200 text-xl font-bold font-dosis text-white p-2 rounded voresKnap"
+  >{
+    kurv == true && (
+      <div class="icon">
+        <img class="" src="/img/toteicon.svg" alt="tote icon" />
+      </div>
+    )
+  }
+  <h4 class="font-text text-deskH4">
+    {knapTekst}
+  </h4>
+</button>
+
+<style>
+  [data-variant="kategori"] {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    font-size: 32px;
+    width: 279px;
+    height: 50px;
+    background-color: #4f7359;
+  }
+</style>

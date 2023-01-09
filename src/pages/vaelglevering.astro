@@ -1,0 +1,103 @@
+---
+import "../styles/global.css";
+import Button from "../components/Button.astro";
+import Banner from "../components/Banner.astro";
+---
+
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vælg - levering</title>
+  </head>
+  <Banner />
+  <body class="bg-beige300">
+    <main
+      class="mx-space30 sm:mx-spaceMarginx mt-spaceMarginTop grid place-content-center mb-space90"
+    >
+      <div class="w-full flex justify-center">
+        <img
+          class="mb-space160"
+          src="../img/p_to.svg"
+          alt="du er på siden med kontaktinfo"
+        />
+      </div>
+      <h1
+        class="lg:text-deskH1 text-mobileH1 font-bold font-text pb-space10 text-center"
+      >
+        Vælg levering
+      </h1>
+
+      <section class="md:flex md:gap-space80 md:pt-space160 md:justify-center">
+        <!-- checkboks  -->
+        <div class="pt-space40 flex justify-center">
+          <a href="/afhent_butik">
+            <div class="hover:translate-y-[-10px] ease-in-out duration-200">
+              <div
+                class="w-[170px] h-[170px] grid justify-center hover:cursor-pointer shadow-md rounded-cornerRound"
+              >
+                <img src="../img/afhent.svg" alt="Ikon af butik" />
+                <p class="grid justify-center font-medium">Afhent i butik</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Telefon -->
+        <div class="pt-space40 flex justify-center">
+          <a href="/levering_info">
+            <div class="hover:translate-y-[-10px] ease-in-out duration-200">
+              <div
+                class="w-[170px] h-[170px] grid justify-center hover:cursor-pointer shadow-md rounded-cornerRound"
+              >
+                <img src="../img/levering.svg" alt="Ikon af leveringsbil" />
+                <p class="grid justify-center font-medium">Levering</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="md:flex md:pt-space160 md:allign-center">
+        <!-- butikken  -->
+        <div class="">
+          <p
+            class="font-text text-black500 text-mobileP font-semibold pt-space80 text-center"
+          >
+            Butikken:
+          </p>
+          <p class="font-text text-grey500 text-mobileP text-center">
+            Ørnevej 60, 2400 KBH NV
+          </p>
+          <p class="font-text text-grey500 text-mobileP text-center">
+            Onsdag: kl. 12:00 – 17:00
+          </p>
+          <p class="font-text text-grey500 text-mobileP text-center">
+            Torsdag: kl. 12:00 – 18:00
+          </p>
+          <p class="font-text text-grey500 text-mobileP text-center">
+            Fredag: kl. 12:00 – 18:00
+          </p>
+
+          <!-- fragt  -->
+          <div class="md:flex md:flex-col md:justify-center">
+            <div class="">
+              <p
+                class="font-text text-black500 text-mobileP font-semibold pt-space80 text-center"
+              >
+                Fragt:
+              </p>
+              <p class="font-text text-grey500 text-mobileP text-center">
+                Storkøbenhavn: Fragt: 40 kr. med forventet levering: 1-3 <br />
+                hverdage. Resten af landet: Fragt: 80 kr. med forventet <br />
+                levering: 2-4 hverdage. <br />
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

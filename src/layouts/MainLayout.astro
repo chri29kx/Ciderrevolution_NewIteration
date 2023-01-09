@@ -1,0 +1,131 @@
+---
+import Banner from "../components/Banner.astro";
+import FooterCider from "../components/FooterCider.astro";
+import Header from "../components/Header.astro";
+import Button from "../components/Button.astro";
+import "../styles/global.css";
+
+let { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="da" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" /><link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    /><link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@800&family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="../js/script.js"></script>
+  </head>
+  <body class="bg-beige300 overflow-x-hidden">
+    <!-- over 18 box  -->
+
+    <div id="atten_boks">
+      <div class="fixed bg-lilac200 w-screen h-screen opacity-[90%]"></div>
+      <div
+        class="bg-lilac100 z-[1000] top-[40%] md:top-[30%] md:left-[30%] fixed p-space30 shadow-md rounded-cornerRound gap-space80 md:w-[500px] mx-space40"
+      >
+        <h1
+          class="text-center font-bold text-mobileH1 pb-space15 md:text-deskH1"
+        >
+          ER DU OVER 18?
+        </h1>
+        <h2 class="text-center text-mobileH2 pb-space15">
+          Er du gammel nok til at drikke fermenteret æblejuice?
+        </h2>
+        <div class="flex justify-center gap-space20 items-center">
+          <button
+            id="accept_atten"
+            class="bg-green300 text-white px-space20 py-space10">Ja</button
+          >
+
+          <button
+            id="deny_atten"
+            class="bg-grey400 text-white px-space20 py-space10">Nej :-(</button
+          >
+        </div>
+      </div>
+    </div>
+
+    <script></script>
+
+    <!-- cookiebox -->
+    <div id="cookieboks" class="">
+      <div
+        class="fixed bottom-[5%] left-[5%] right-[5%] bg-lilac100 opacity-[98%] p-space30 shadow-md rounded-cornerRound md:grid md:grid-cols-2 gap-space80 max-w-[750px]"
+      >
+        <div class="grid">
+          <h4 class="text-mobileH4 font-bold md:text-deskH4">
+            Vi samler cookies! Selvom vi hellere ville samle æbler..
+          </h4>
+          <p class="text-mobileP text-black pt-space20 pb-space10">
+            Vi bruger cookies for at give dig den bedste oplevelse på vores
+            hjemmeside.
+          </p>
+        </div>
+        <div class="grid">
+          <button
+            id="accepter"
+            class="bg-green300 text-white p-space10 mb-space20">Accepter</button
+          >
+          <button id="afvis" class="bg-slate-400 p-space10">Afvis</button>
+
+          <br />
+          <a class="text-xscopy underline" href="#"
+            >Læs mere om vores privatlivspolitik</a
+          >
+        </div>
+      </div>
+    </div>
+    <Banner />
+    <Header />
+    <main class="mx-space30 sm:mx-spaceMarginx mt-spaceMarginTop">
+      <slot />
+    </main>
+    <FooterCider />
+    <script>
+      const acceptCookie = document.querySelector("#accepter");
+      const denyCookie = document.querySelector("#afvis");
+      const cookieboks = document.querySelector("#cookieboks");
+
+      const acceptAtten = document.querySelector("#accept_atten");
+      const denyAtten = document.querySelector("#deny_atten");
+      const Attenboks = document.querySelector("#atten_boks");
+
+      acceptCookie.addEventListener("click", fjernCookieboks);
+      denyCookie.addEventListener("click", fjernCookieboks);
+
+      function fjernCookieboks() {
+        cookieboks.classList.add("hidden");
+        sessionStorage.setItem("fjerncookieboks", true.toString());
+      }
+
+      // udkommenter herfra hvis den skal komme hele tiden
+      if (sessionStorage.getItem("fjerncookieboks")) {
+        cookieboks.classList.add("hidden");
+      }
+
+      acceptAtten.addEventListener("click", fjernAttenboks);
+      denyAtten.addEventListener("click", fjernAttenboks);
+
+      function fjernAttenboks() {
+        Attenboks.classList.add("hidden");
+        sessionStorage.setItem("fjernAttenboks", true.toString());
+      }
+
+      // udkommenter herfra hvis den skal komme hele tiden
+      if (sessionStorage.getItem("fjernAttenboks")) {
+        Attenboks.classList.add("hidden");
+      }
+    </script>
+  </body>
+</html>

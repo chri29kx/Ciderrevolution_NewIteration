@@ -1,0 +1,315 @@
+---
+import Button from "../components/Button.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import "../styles/global.css";
+---
+
+<MainLayout title="Din kurv">
+  <main>
+    <section class="lg:hidden" id="mobil">
+      <div>
+        <button
+          ><Button
+            variant="thirdy"
+            href="/shop"
+            knapTekst="Fortsæt med at handle"
+          />
+        </button>
+        <h1 class="text-mobileH1 font-bold mt-space50 font-text mb-space30">
+          Kurv
+        </h1>
+        <hr class="h-[2px] bg-orange-300 border-none" />
+      </div>
+
+      <div class="mt-space30 mb-space30">
+        <img class="" src="../img/kurvbillede.png" alt="kurvbillede" />
+      </div>
+      <section class="flex flex-col gap-space30">
+        <div class="flex justify-between">
+          <h5 class="text-mobileH5 font-text font-semibold">Produkt</h5>
+          <h5 class="text-mobileH5 font-text">CIDERBAR TO-GO (12 STK)</h5>
+        </div>
+        <div class="flex justify-between">
+          <h5 class="text-mobileH5 font-text font-semibold">Pris</h5>
+          <h5 class="text-mobileH5 font-text">455 DKK</h5>
+        </div>
+        <div class="flex justify-between">
+          <h5 class="text-deskH5 font-text font-semibold mb-space20">Mængde</h5>
+          <div class="flex flex-col items-center pb-space25">
+            <div
+              id="container"
+              class="flex border-green100 border-2 w-[150px] h-[50px] justify-between items-center"
+            >
+              <button
+                class="font-bold minus123 px-space10 border-green100 border-r-2 font-text text-mobileH3 text-black500"
+                id="minus5">-</button
+              >
+              <span
+                class="font-bold font-text px-space10 text-mobileH3 text-black500"
+                id="number5">0</span
+              >
+              <button
+                class="font-bold px-space10 plus123 border-green100 border-l-2 font-text text-mobileH3 text-black500"
+                id="plus5">+</button
+              >
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-between">
+          <h5 class="text-mobileH5 font-text font-semibold">Fjern</h5>
+          <img class="w-[20px]" src="../img/fjernikon.svg" alt="fjern ikon" />
+        </div>
+        <div class="flex justify-between">
+          <h5 class="text-mobileH5 font-text font-semibold">Total</h5>
+          <h5 class="text-mobileH5 font-text underline">455 DKK</h5>
+        </div>
+      </section>
+      <hr class="h-[2px] mt-space40 bg-orange-300 border-none" />
+      <div class="mt-space30 mb-space30">
+        <img class="" src="../img/kurvbillede2.png" alt="kurvbillede" />
+      </div>
+      <section class="flex flex-col gap-space30">
+        <div class="flex justify-between">
+          <h5 class="text-mobileH5 font-text font-semibold">Produkt</h5>
+          <h5 class="text-mobileH5 font-text">Genluk - Ciderprop</h5>
+        </div>
+        <div class="flex justify-between">
+          <h5 class="text-mobileH5 font-text font-semibold">Pris</h5>
+          <h5 class="text-mobileH5 font-text">35 DKK</h5>
+        </div>
+        <div class="flex justify-between">
+          <h5 class="text-deskH5 font-text font-semibold mb-space20">Mængde</h5>
+          <div class="flex flex-col items-center pb-space25">
+            <div
+              id="container"
+              class="flex border-green100 border-2 w-[150px] h-[50px] justify-between items-center"
+            >
+              <button
+                class="font-bold minus123 px-space10 border-green100 border-r-2 font-text text-mobileH3 text-black500"
+                id="minus2">-</button
+              >
+              <span
+                class="font-bold font-text px-space10 text-mobileH3 text-black500"
+                id="number2">0</span
+              >
+              <button
+                class="font-bold px-space10 plus123 border-green100 border-l-2 font-text text-mobileH3 text-black500"
+                id="plus2">+</button
+              >
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-between">
+          <h5 class="text-mobileH5 font-text font-semibold">Fjern</h5>
+          <img class="w-[20px]" src="../img/fjernikon.svg" alt="fjern ikon" />
+        </div>
+        <div class="flex justify-between">
+          <h5 class="text-mobileH5 font-text font-semibold">Total</h5>
+          <h5 class="text-mobileH5 font-text underline">35 DKK</h5>
+        </div>
+      </section>
+      <hr class="h-[2px] mt-space40 bg-orange-300 border-none" />
+      <section>
+        <div class="flex mt-space30 border-b-2 border-black w-[230px]">
+          <h2 class="text-mobileH2 font-bold font-text mr-space10">TOTAL:</h2>
+          <h2 class="text-mobileH2 font-bold font-text">490 DKK</h2>
+        </div>
+
+        <div>
+          <label
+            for="exampleFormControlInput1"
+            class="form-label mt-space30 mb-space10 inline-block font-text text-mobileH4 font-semibold"
+            >Rabatkupon:</label
+          >
+          <input
+            type="text"
+            class="form-control block px-3 py-1.5 text-base font-normal bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 p-[3px]"
+            id="exampleFormControlInput1"
+            placeholder=" Indtast rabatkupon her"
+          />
+          <p class="text-mobileP mt-space25">
+            Storkøbenhavn: Fragt: 40 kr. med forventet levering: 1-3 hverdage.
+            Resten af landet: Fragt: 80 kr. med forventet levering: 2-4
+            hverdage. Gratis afhentning i vores butik på Ørnevej (KBH NV)
+          </p>
+          <div class="mt-space30">
+            <Button
+              variant="primary"
+              href="/opret_bruger_login"
+              knapTekst="Checkout"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- <div class="grid grid-cols-2">
+        <div class="flex flex-col gap-[36px]">
+          <h5 class="text-mobileH5 font-semibold">Produkt</h5>
+          <h5 class="text-mobileH5 font-semibold">Pris</h5>
+          <h5 class="text-mobileH5 font-semibold">Mængde</h5>
+          <h5 class="text-mobileH5 font-semibold">Fjern</h5>
+          <h5 class="text-mobileH5 font-semibold">Total</h5>
+        </div>
+        <div class="flex flex-col gap-space30">
+          <h5 class="text-mobileH5">CIDERBAR TO-GO (12 STK)</h5>
+          <h5 class="text-mobileH5 font-semibold">455 DKK</h5>
+          <h5 class="text-mobileH5 font-semibold">Mængde</h5>
+          <img class="w-[20px]" src="img/fjernikon.svg" alt="" />
+          <h5 class="text-mobileH5 font-semibold">455 DKK</h5>
+        </div>
+      </div> -->
+    </section>
+    <section class="hidden lg:block" id="web">
+      <button>
+        <Button
+          variant="thirdy"
+          href="/shop"
+          knapTekst="Fortsæt med at handle"
+        />
+      </button>
+      <h1 class="text-deskH1 font-bold mt-space50 font-text mb-space30">
+        Kurv
+      </h1>
+      <hr class="h-[2px] mt-space40 mb-space40 bg-orange-300 border-none" />
+      <div class="flex justify-between">
+        <div>
+          <h5 class="text-deskH5 font-text font-semibold mb-space20">
+            Produkt
+          </h5>
+          <img class="" src="../img/kurvbillede.png" alt="kurvbillede" />
+        </div>
+        <div>
+          <h5 class="text-deskH5 font-text font-semibold mb-space20">Navn</h5>
+          <h5 class="text-deskH5 font-text w-[260px]">
+            Cidrerie de l’Apothicaire Amzer Zo’ Cidrerie de l’Apothicaire Amzer
+            Zo’ Cidrerie de l’Apothicaire Amzer Zo’ Cidrerie de l’Apothicaire
+            Amzer Zo’
+          </h5>
+        </div>
+        <div>
+          <h5 class="text-deskH5 font-text font-semibold mb-space20">Pris</h5>
+          <h5 class="text-mobileH5 font-text">455 DKK</h5>
+        </div>
+        <div>
+          <h5 class="text-deskH5 font-text font-semibold mb-space20">Mængde</h5>
+          <div class="flex flex-col items-center pb-space25">
+            <div
+              id="container"
+              class="flex border-green100 border-2 w-[150px] h-[50px] justify-between items-center"
+            >
+              <button
+                class="font-bold minus123 px-space10 border-green100 border-r-2 font-text text-mobileH3 text-black500"
+                id="minus3">-</button
+              >
+              <span
+                class="font-bold font-text px-space10 text-mobileH3 text-black500"
+                id="number3">0</span
+              >
+              <button
+                class="font-bold px-space10 plus123 border-green100 border-l-2 font-text text-mobileH3 text-black500"
+                id="plus3">+</button
+              >
+            </div>
+          </div>
+        </div>
+        <div>
+          <h5 class="text-deskH5 font-text font-semibold mb-space20">Fjern</h5>
+          <img src="../img/fjernikon.svg" alt="fjern ikon" />
+        </div>
+        <div>
+          <h5 class="text-deskH5 font-text font-semibold mb-space20">Total</h5>
+          <h5 class="text-deskH5 font-text font-semibold">455 DKK</h5>
+        </div>
+      </div>
+      <hr class="h-[2px] mt-space40 mb-space40 bg-orange-300 border-none" />
+      <div class="flex justify-between">
+        <div>
+          <h5 class="text-deskH5 font-text font-semibold mb-space20">
+            Produkt
+          </h5>
+          <img class="" src="../img/kurvbillede.png" alt="kurvbillede" />
+        </div>
+        <div>
+          <h5 class="text-deskH5 font-text font-semibold mb-space20">Navn</h5>
+          <h5 class="text-deskH5 font-text w-[260px]">
+            Cidrerie de l’Apothicaire Amzer Zo’ Cidrerie de l’Apothicaire Amzer
+            Zo’ Cidrerie de l’Apothicaire Amzer Zo’ Cidrerie de l’Apothicaire
+            Amzer Zo’
+          </h5>
+        </div>
+        <div>
+          <h5 class="text-deskH5 font-text font-semibold mb-space20">Pris</h5>
+          <h5 class="text-mobileH5 font-text">455 DKK</h5>
+        </div>
+        <div>
+          <h5 class="text-deskH5 font-text font-semibold mb-space20">Mængde</h5>
+          <div class="flex flex-col items-center pb-space25">
+            <div
+              id="container"
+              class="flex border-green100 border-2 w-[150px] h-[50px] justify-between items-center"
+            >
+              <button
+                class="font-bold minus123 px-space10 border-green100 border-r-2 font-text text-mobileH3 text-black500"
+                id="minus4">-</button
+              >
+              <span
+                class="font-bold font-text px-space10 text-mobileH3 text-black500"
+                id="number4">0</span
+              >
+              <button
+                class="font-bold px-space10 plus123 border-green100 border-l-2 font-text text-mobileH3 text-black500"
+                id="plus4">+</button
+              >
+            </div>
+          </div>
+        </div>
+        <div>
+          <h5 class="text-deskH5 font-text font-semibold mb-space20">Fjern</h5>
+          <img src="../img/fjernikon.svg" alt="fjern ikon" />
+        </div>
+        <div>
+          <h5 class="text-deskH5 font-text font-semibold mb-space20">Total</h5>
+          <h5 class="text-deskH5 font-text font-semibold">455 DKK</h5>
+        </div>
+      </div>
+      <hr class="h-[2px] mt-space40 mb-space40 bg-orange-300 border-none" />
+      <div class="flex justify-between">
+        <div class="flex gap-space10 items-baseline">
+          <label
+            for="exampleFormControlInput1"
+            class="form-label mb-space10 inline-block font-text text-deskH4 font-semibold"
+            >Rabatkupon:</label
+          >
+          <input
+            type="text"
+            class="form-control block px-3 py-1.5 text-base font-normal bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 p-[3px]"
+            id="exampleFormControlInput1"
+            placeholder=" Indtast rabatkupon her"
+          />
+        </div>
+        <div class="flex border-b-2 border-black w-[150px]">
+          <h2 class="text-deskH4 font-bold font-text mr-space10">TOTAL:</h2>
+          <h2 class="text-deskH4 font-bold font-text">490 DKK</h2>
+        </div>
+      </div>
+      <div class="flex justify-between">
+        <div class="w-[550px]">
+          <p class="text-deskP font-text mt-space30">
+            Storkøbenhavn: Fragt: 40 kr. med forventet levering: 1-3 hverdage.
+            Resten af landet: Fragt: 80 kr. med forventet levering: 2-4
+            hverdage. Gratis afhentning i vores butik på Ørnevej (KBH NV)
+          </p>
+        </div>
+        <button class="mt-space30">
+          <Button
+            variant="primary"
+            href="/opret_bruger_login"
+            knapTekst="Checkout"
+            kurv={false}
+          />
+        </button>
+      </div>
+    </section>
+  </main>
+</MainLayout>
+<script></script>

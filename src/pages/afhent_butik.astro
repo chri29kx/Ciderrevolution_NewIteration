@@ -1,0 +1,81 @@
+---
+import "../styles/global.css";
+import Button from "../components/Button.astro";
+import Banner from "../components/Banner.astro";
+---
+
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Afhent Butik</title>
+  </head>
+  <Banner />
+  <body class="bg-beige300 overflow-x-hidden">
+    <main
+      class="mx-space30 sm:mx-spaceMarginx mt-spaceMarginTop grid place-content-center mb-space90"
+    >
+      <!-- h1  -->
+      <h1
+        class="lg:text-deskH1 text-mobileH1 font-bold font-text pb-space10 text-center"
+      >
+        Afhent i butik
+      </h1>
+
+      <!-- ikon  -->
+      <div class="pt-space40 flex justify-center">
+        <img src="../img/afhent.svg" alt="" />
+      </div>
+      <!-- h2  -->
+      <h2
+        class="lg:text-deskP text-mobileP font-medium font-text pb-space10 text-center"
+      >
+        Ordrenummer: #42331
+      </h2>
+      <hp
+        class="lg:text-deskP text-mobileP font-medium font-text pb-space10 text-center pt-space40"
+      >
+        Vi kontakter dig når din ordre er klar til afhentning <br /> på dine valgte
+        kontaktoplysninger
+      </hp>
+
+      <p class="font-text text-grey300 text-mobileP text-center pt-space15">
+        Mvh. Cider-revolutionen
+      </p>
+      <a
+        class="text-link underline font-medium text-blue300 pt-space15 justify-center flex"
+        href="/vaelglevering">Vil du have leveret din pakke istedet?</a
+      >
+
+      <div class="pt-space40 flex justify-center">
+        <Button
+          variant="primary"
+          href="/"
+          knapTekst="Tilbage til forside"
+          kurv={false}
+        />
+      </div>
+    </main>
+
+    <!-- info  -->
+    <p
+      class="font-text text-black500 text-mobileP font-semibold pt-space40 text-center"
+    >
+      Åbningstider & Adresse:
+    </p>
+    <p class="font-text text-grey300 text-mobileP text-center pt-space15">
+      Ørnevej 60, 2400 KBH NV
+    </p>
+    <p class="font-text text-grey300 text-mobileP text-center">
+      Onsdag: kl. 12:00 – 17:00
+    </p>
+    <p class="font-text text-grey300 text-mobileP text-center">
+      Torsdag: kl. 12:00 – 18:00
+    </p>
+    <p class="font-text text-grey300 text-mobileP text-center">
+      Fredag: kl. 12:00 – 18:00
+    </p>
+  </body>
+</html>

@@ -1,0 +1,130 @@
+---
+import "../styles/global.css";
+import Button from "../components/Button.astro";
+import Banner from "../components/Banner.astro";
+---
+
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Du har bobler i kurven!</title>
+  </head>
+  <Banner />
+  <body class="bg-beige300 overflow-x-hidden">
+    <main
+      class="mx-space30 sm:mx-spaceMarginx mt-spaceMarginTop grid place-content-center mb-space90"
+    >
+      <div class="w-full flex justify-center">
+        <img
+          class="mb-space160"
+          src="../img/p_fem.svg"
+          alt="du er på siden med kontaktinfo"
+        />
+      </div>
+      <div class="flex justify-center">
+        <img src="../img/korts.svg" alt="Ikon af kort" />
+      </div>
+      <h1
+        class="lg:text-deskH1 text-mobileH1 font-bold font-text pb-space10 text-center"
+      >
+        Kort oplysinger
+      </h1>
+
+      <!-- kort oplysninger -->
+      <section class="grid place-content-center">
+        <form class="w-[380px]" action="">
+          <!-- kortnummer  -->
+          <div class="mt-space20">
+            <label
+              for="nummer"
+              class="block mb-[4px] text-sm font-medium text-black500"
+              >Kortnummer</label
+            >
+            <input
+              type="tel"
+              inputmode="numeric"
+              id="nummer"
+              class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
+              placeholder="Eks. 1234 1234 1234 1234"
+            />
+          </div>
+
+          <!-- kort navn  -->
+          <div class="mt-space20">
+            <label
+              for="efternavn"
+              class="block mb-[4px] text-sm font-medium text-black500"
+              >Kortholder</label
+            >
+            <input
+              type="text"
+              inputmode="text"
+              id="efternavn"
+              class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
+              placeholder="Eks. Mads Johansen"
+            />
+          </div>
+
+          <!-- udløbsdato  -->
+          <div class="flex gap-space15">
+            <div class="mt-space20">
+              <label
+                for="dato"
+                class="block mb-[4px] text-sm font-medium text-black500"
+                >Udløbsdato</label
+              >
+              <input
+                type="tel"
+                inputmode="numeric"
+                id="dato"
+                class="max-w-[180px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
+                placeholder="Eks. 02 / 26"
+              />
+            </div>
+
+            <!-- CCV  -->
+            <div class="mt-space20">
+              <label
+                for="ccv"
+                class="block mb-[4px] text-sm font-medium text-black500"
+                >CCV</label
+              >
+              <input
+                type="tel"
+                inputmode="numeric"
+                id="ccv"
+                class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
+                placeholder="Eks. 123"
+              />
+            </div>
+          </div>
+          <!-- checkboks  -->
+          <div class="pt-space15">
+            <input
+              id="checkboks"
+              type="checkbox"
+              class="w-4 h-4 text-black500 bg-gray-100 rounded-[5px] border-grey300 focus:ring-black500 focus:border-black500"
+            />
+            <label
+              for="checkboks"
+              class="ml-2 text-sm font-medium text-black500"
+              >Husk mig til næste gang!</label
+            >
+          </div>
+        </form>
+
+        <div class="pt-space20">
+          <Button
+            variant="primary"
+            href="/bekraft_ordre"
+            knapTekst="Godkend"
+            kurv={false}
+          />
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

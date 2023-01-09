@@ -1,0 +1,63 @@
+---
+import "../styles/global.css";
+import Button from "../components/Button.astro";
+import Banner from "../components/Banner.astro";
+---
+
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Note til levering</title>
+  </head>
+  <Banner />
+  <body class="bg-beige300 overflow-x-hidden">
+    <main class="mx-space30 sm:mx-spaceMarginx mt-spaceMarginTop mb-space90">
+      <div class="w-full flex justify-center">
+        <img
+          class="mb-space160"
+          src="../img/p_fire.svg"
+          alt="du er på siden med en note til levering"
+        />
+      </div>
+      <h1
+        class="lg:text-deskH1 text-mobileH1 font-bold font-text pb-space10 text-center"
+      >
+        Har du en note til leveringen?
+      </h1>
+
+      <p
+        class="font-text text-grey400 text-mobileP font-semibold pt-space40 text-center"
+      >
+        Hvis du ikke har noget at tilføje, klik blot på næste
+      </p>
+      <!-- besked felt  -->
+
+      <div class="grid place-content-center pt-space25">
+        <label
+          class="block mb-[4px] text-sm font-medium text-black500"
+          for="besked">Besked</label
+        >
+
+        <textarea
+          class="resize-none max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
+          id="besked"
+          name="besked"
+          rows="4"
+          cols="50"
+          placeholder="eks. Stil gerne pakken i cykelskuret til højre.."
+        ></textarea>
+      </div>
+      <div class="pt-space50 flex place-content-center">
+        <Button
+          variant="primary"
+          href="/betalingsform"
+          knapTekst="Til Betaling"
+          kurv={false}
+        />
+      </div>
+    </main>
+  </body>
+</html>

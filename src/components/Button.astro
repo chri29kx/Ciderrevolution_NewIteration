@@ -1,0 +1,101 @@
+---
+const { variant, href, knapTekst, kurv } = Astro.props;
+---
+
+<a
+  href={href}
+  data-variant={variant}
+  class="font-bold font-dosis cursor-pointer text-white p-2 voresKnap"
+  >{
+    kurv == true && (
+      <div class="icon">
+        <img class="" src="/img/toteicon.svg" alt="tote_icon" />
+      </div>
+    )
+  }
+
+  {knapTekst}
+</a>
+
+<style>
+  .voresKnap {
+    transition: 200ms ease-in-out;
+  }
+  .voresKnap:hover {
+    box-shadow: -5px 5px 0px 0px rgba(51, 51, 51, 1);
+  }
+
+  .voresKnap:active {
+    box-shadow: -2px 2px 0px 0px rgba(51, 51, 51, 1);
+    transform: translate(-2px, 2px);
+  }
+  [data-variant="primary"] {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    font-size: 18px;
+    width: 200px;
+    height: 50px;
+    background-color: #4f7359;
+  }
+  [data-variant="thirdy"] {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    font-size: 18px;
+    width: 250px;
+    height: 50px;
+    background-color: #4f7359;
+  }
+  [data-variant="kategori"] {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    font-size: 32px;
+    width: 279px;
+    height: 50px;
+    background-color: #4f7359;
+  }
+  [data-variant="primary_ciderskolen"] {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    font-size: 32px;
+    height: 68px;
+    background-color: #4f7359;
+  }
+  [data-variant="secondary"] {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    font-size: 32px;
+    width: 279px;
+    height: 68px;
+    background-color: #9174c3;
+  }
+  [data-variant="inactive"] {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    font-size: 32px;
+    width: 279px;
+    height: 68px;
+    background-color: #9a9fa5;
+  }
+  [data-variant="warning"] {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    font-size: 32px;
+    width: 279px;
+    height: 68px;
+    background-color: #d1541d;
+  }
+</style>

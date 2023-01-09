@@ -1,0 +1,223 @@
+---
+// Component Imports
+
+import MainLayout from "../layouts/MainLayout.astro";
+import "../styles/global.css";
+import Button from "../components/Button.astro";
+import Banner from "../components/Banner.astro";
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<MainLayout title="Ciderrevolution - Forside">
+  <section id="splash_mobile">
+    <div class="flex flex-col items-center justify-center">
+      <article class="flex flex-col gap-space20">
+        <h1 class="text-mobileH1 text-black600 font-text font-bold">
+          CIDERREVOLUTION
+        </h1>
+        <h2 class="text-mobileH2 text-black500 font-text font-semibold">
+          Cider der smager af meget mere
+        </h2>
+        <div class="w-full flex justify-center">
+          <div class="max-w-[400px]">
+            <img
+              class=""
+              src="../img/splash.svg"
+              alt="forsidebillede af Ciderrevolutions logo"
+            />
+          </div>
+        </div>
+        <div class="cta-btn flex justify-center">
+          <a href="/shop">
+            <button class="nyButton p-space50 font-bold font-text text-deskH4"
+              >Se cidershoppen!</button
+            >
+          </a>
+        </div>
+        <p class="text-mobileP font-text text-black500 max-w-[550px]">
+          Hos ciderrevolution finder du det bedste cider som Danmark og resten
+          europa har at byde på - og hvis du har lyst til at dykke ned i
+          ciderliteraturen, er du også kommet til det rette sted - vi har nemlig
+          Danmarks største informationsarkiv om cider!
+        </p>
+      </article>
+    </div>
+  </section>
+  <section id="splash_desktop">
+    <article class="grid grid-cols-2 hejsa">
+      <div class="col1 flex flex-col gap-space25">
+        <h1 class="text-deskH1 font-bold font-text text-black600">
+          CIDERREVOLUTION
+        </h1>
+        <h2 class="text-deskH2 font-semibold font-text text-black500">
+          Cider der smager af meget mere
+        </h2>
+        <p class="text-mobileP font-text text-black500 max-w-[550px]">
+          Hos ciderrevolution finder du det bedste cider som Danmark og resten
+          europa har at byde på - og hvis du har lyst til at dykke ned i
+          ciderliteraturen, er du også kommet til det rette sted - vi har nemlig
+          Danmarks største informationsarkiv om cider!
+        </p>
+        <div class="cta-btn flex justify-start max-w-[550px]">
+          <a href="/shop">
+            <button class="nyButton p-space50 font-bold font-text text-deskH4"
+              >Se cidershoppen!</button
+            >
+          </a>
+        </div>
+      </div>
+      <div class="w-full flex items-end">
+        <div class="splash-img max-w-[500px]">
+          <img
+            src="../img/splash.svg"
+            alt="forsidebillede af Ciderrevolutions logo"
+          />
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section
+    id="mission_etc_container"
+    class="mt-space80 flex flex-col gap-space80"
+  >
+    <article
+      class="vores flex flex-col gap-space25 lg:flex-row lg:items-center"
+    >
+      <div class="vores_img">
+        <img src="../img/mission.webp" alt="billede af ejerne" />
+      </div>
+      <div class="mission_tekst flex flex-col gap-space25 lg:ml-space25">
+        <h3
+          class="text-black500 font-text text-mobileH2 lg:text-deskH2 font-semibold"
+        >
+          Vores mission
+        </h3>
+        <p class="font-text text-black500 text-mobileP max-w-[550px]">
+          Vi tror på, at rigtig cider vil vælte dine smagsløg omkuld, ligesom
+          det gjorde for os. Vi kan ikke kontrollere, om andre laver oversødet
+          sodavandssprøjt og kalder det cider, men vi kan udbrede kendskabet til
+          rigtig cider ved at finde og lave de bedste af slagsen. Velkommen til!
+        </p>
+        <Button href="/404" variant="primary" knapTekst="OM OS" kurv={false} />
+      </div>
+    </article>
+
+    <article
+      class="dyk_ned flex flex-col gap-space25 lg:flex-row-reverse lg:items-center lg:justify-start"
+    >
+      <div class="dyk_ned_img">
+        <img
+          class=""
+          src="../img/dyk_ned.webp"
+          alt="billede af cider på en stol"
+        />
+      </div>
+      <div class="mission_tekst flex flex-col gap-space25 max-w-[550px]">
+        <h3
+          class="text-black500 font-text text-mobileH2 lg:text-deskH2 font-semibold"
+        >
+          Dyk ned i ciderverdenen
+        </h3>
+        <p class="font-text text-black500 text-mobileP max-w-[550px]">
+          Lær alt om, hvordan du laver cider, dyk ned ciderens forunderlige
+          historie eller læs vores mange spændende blogindlæg om alt, hvad der
+          hedder cider.
+        </p>
+        <Button
+          href="/ciderskolen"
+          variant="primary"
+          knapTekst="BESØG CIDERSKOLEN"
+          kurv={false}
+        />
+      </div>
+    </article>
+    <div class="flex flex-col w-full items-center">
+      <article
+        class="testimonials_wrapper w-fit p-space50 lg:w-full lg:p-space80 bg-beige400 flex flex-col items-center"
+      >
+        <h3
+          class="font-semibold font-text lg:text-deskH2 text-mobileH2 text-black500 pb-space50"
+        >
+          Anmeldelser fra vores kunder
+        </h3>
+        <div class="flex flex-col gap-space25 lg:flex-row">
+          <div class="maya flex flex-col gap-space10">
+            <h4 class="font-semibold font-text text-mobileH4 text-black500">
+              Maya N.
+            </h4>
+            <p class="font-text text-black500 text-mobileP max-w-[300px]">
+              “Fantastiske cidere og virkelig god service. Ciderrevolutionen var
+              virkelig gode til at hjælpe med at finde den helt rigtige cider.
+              Kan varmt anbefales herfra”
+            </p>
+            <div class="apples_img pt-space10 pb-space20">
+              <img
+                src="../img/apples.png"
+                alt="5 stjerner illustreret som æbler"
+              />
+            </div>
+          </div>
+          <div class="pernille flex flex-col gap-space10">
+            <h4 class="font-semibold font-text text-mobileH4 text-black500">
+              Pernille N.
+            </h4>
+            <p class="font-text text-black500 text-mobileP max-w-[300px]">
+              “Really good selection of ciders. Perfect for connoisseurs AND
+              everyone wanting to know more about the fruity stuff”
+            </p>
+            <div class="apples_img pt-space10 pb-space20">
+              <img
+                src="../img/apples.png"
+                alt="5 stjerner illustreret som æbler"
+              />
+            </div>
+          </div>
+          <div class="pernille flex flex-col gap-space10">
+            <h4 class="font-semibold font-text text-mobileH4 text-black500">
+              Jimmy C.
+            </h4>
+            <p class="font-text text-black500 text-mobileP max-w-[300px]">
+              "Stort udvalg, kompetent betjening, folk der går virkeligt meget
+              op i at gøre Danmark til et cider-land"
+            </p>
+            <div class="apples_img pt-space10 pb-space20">
+              <img
+                src="../img/apples.png"
+                alt="5 stjerner illustreret som æbler"
+              />
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <article
+      class="i_tvivl flex flex-col gap-space25 lg:flex-row lg:items-center"
+    >
+      <div class="i_tvivl_img">
+        <img src="../img/i_tvivl.webp" alt="billede af en masse cidere" />
+      </div>
+      <div
+        class="i_tvivl_tekst flex flex-col gap-space25 lg:ml-space25 max-w-[550px]"
+      >
+        <h3
+          class="text-black500 lg:text-deskH2 font-text text-mobileH2 font-semibold"
+        >
+          Er du i tvivl om hvad du skal vælge?
+        </h3>
+        <p class="font-text text-black500 text-mobileP max-w-[550px]">
+          Så prøv vores introduktionskasse til cider. Her har vi sammensat nogle
+          af de bedste cidere inden for hver deres genre.
+        </p>
+        <Button
+          href="/shop"
+          variant="thirdy"
+          knapTekst="PRØV EN SMAGEKASSE"
+          kurv={false}
+        />
+      </div>
+    </article>
+  </section>
+</MainLayout>

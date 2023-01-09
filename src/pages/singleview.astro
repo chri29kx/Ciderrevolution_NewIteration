@@ -1,0 +1,115 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import "../styles/global.css";
+import Button from "../components/Button.astro";
+import Card from "../components/Card.astro";
+---
+
+<MainLayout>
+  <section class="flex flex-col items-center gap-space25">
+    <div class="lg:grid grid-cols-2 lg:place-items-center">
+      <article id="single_img" class="lg:order-2">
+        <div class="single_img_wrapper max-w-[450px] lg:max-w-[500px]">
+          <img
+            src="../img/cider_single_desk.webp"
+            alt="produktbillede af cider"
+          />
+        </div>
+      </article>
+      <article id="single_tekst" class="lg:order-1">
+        <div class="single_tekst_wrapper flex flex-col gap-space25">
+          <h1
+            class="font-text font-bold text-mobileH1 lg:text-deskH1 text-black500"
+          >
+            Cidrerie de l’Apothicaire
+          </h1>
+          <h2
+            class="pris font-text font-semibold text-mobileH2 lg:text-deskH2 text-blue300"
+          >
+            169 kr.
+          </h2>
+          <p
+            class="font-text flex flex-col text-black500 text-mobileP lg:max-w-[550px] max-w-[400px]"
+          >
+            Cideren er vildgæret og økologisk, og har en fed gæret sprød smag,
+            med en let naturlig aroma. Hors-Norme er La Ciderie de Golfes
+            klassiske cider. La Ciderie de Golfe er en lille naturciderproducent
+            ledet af Marc Abel, som producerer alt på tradionelt low-tech
+            metode, hvor alt er vildgæret og økologisk.
+          </p>
+          <div class="info">
+            <p class="font-text text-mobileP text-black500">
+              <span class="font-bold">Område:</span> Bretagne, Frankrig
+            </p>
+            <p class="font-text text-mobileP text-black500">
+              <span class="font-bold">Vol:</span> 5,5 %
+            </p>
+          </div>
+          <div class="lg:flex lg:w-full lg:gap-space25">
+            <div class="flex flex-col items-center pb-space25">
+              <div
+                id="container"
+                class="flex border-green100 border-2 w-[200px] h-[50px] justify-between items-center"
+              >
+                <button
+                  class="font-bold minus123 px-space10 border-green100 border-r-2 font-text text-mobileH3 text-black500"
+                  id="minus">-</button
+                >
+                <span
+                  class="font-bold font-text px-space10 text-mobileH3 text-black500"
+                  id="number">0</span
+                >
+                <button
+                  class="font-bold px-space10 plus123 border-green100 border-l-2 font-text text-mobileH3 text-black500"
+                  id="plus">+</button
+                >
+              </div>
+            </div>
+            <div class="flex w-full justify-center lg:justify-start">
+              <Button
+                href="/kurv"
+                variant="primary"
+                knapTekst="Tilføj til kurv"
+                kurv={true}
+              />
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <article
+      id="anbefalede"
+      class="w-full pt-space50 flex flex-col items-center"
+    >
+      <h3
+        class="font-text font-semibold text-mobileH2 lg:text-deskH2 text-black500 pb-space25 lg:pb-space50"
+      >
+        Anbefalede i samme stil
+      </h3>
+      <div class="anbefalede_wrapper w-full place-items-center gap-space25">
+        <Card
+          titel="3 fantastiske cidere"
+          producent="Fra danske producenter"
+          pris="DKK 600"
+          pic="danskkasse_et"
+          pic_hovered="danskkasse_info"
+          tilbud={true}
+        />
+        <Card
+          titel="3 vilde cidere"
+          producent="Fra franske producenter"
+          pris="DKK 475"
+          pic="franskkasse_to"
+          pic_hovered="franskkasse_info"
+        />
+        <Card
+          titel="Alkoholfri ciderkasse"
+          producent="Danske og franske"
+          pris="DKK 455"
+          pic="startkasse_tre"
+          pic_hovered="alkoholfri_info"
+        />
+      </div>
+    </article>
+  </section>
+</MainLayout>

@@ -1,0 +1,48 @@
+---
+---
+
+<!-- cookiebox -->
+<div class="absolute md:place-content-baseline">
+  <div
+    class="bg-lilac100 p-space30 shadow-md rounded-cornerRound md:grid md:grid-cols-2 gap-space80"
+  >
+    <div class="grid">
+      <h4 class="text-mobileH4 font-bold md:text-deskH4">
+        Vi samler cookies! Selvom vi hellere ville samle æbler..
+      </h4>
+      <p class="text-mobileP text-black pt-space20 pb-space10">
+        Vi bruger cookies for at give dig den bedste oplevelse på vores
+        hjemmeside.
+      </p>
+    </div>
+    <div class="grid">
+      <button class="bg-green300 text-white p-space10 mb-space20"
+        >Accepter</button
+      >
+      <button class="bg-slate-400 p-space10">Afvis</button>
+
+      <br />
+      <a class="text-xscopy underline" href="#"
+        >Læs mere om vores privatlivspolitik</a
+      >
+    </div>
+  </div>
+</div>
+
+<script>
+  const acceptCookie = document.querySelector("#accepter");
+  const denyCookie = document.querySelector("#afvis");
+  const cookieboks = document.querySelector("#cookieboks");
+
+  acceptCookie.addEventListener("click", fjernCookieboks);
+  denyCookie.addEventListener("click", fjernCookieboks);
+
+  function fjernCookieboks() {
+    cookieboks.classList.add("hidden");
+    sessionStorage.setItem("fjerncookieboks", true.toString());
+  }
+
+  if (sessionStorage.getItem("fjerncookieboks")) {
+    cookieboks.classList.add("hidden");
+  }
+</script>

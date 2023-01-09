@@ -1,0 +1,58 @@
+---
+const {
+  titel,
+  producent,
+  pris,
+  pic,
+  pic_hovered,
+  udsolgt,
+  tilbud = "vin",
+} = Astro.props;
+import Button from "../components/Button.astro";
+---
+
+<div class="flex items-center flex-col w-[300px]">
+  <a id="my-card" href="/singleview">
+    <div class="image">
+      <img
+        class="cursor-mincursor default"
+        src={`/img/produktbilleder/${pic}_pic-100.webp`}
+        alt="Produktbillede"
+      />
+      <img
+        class="cursor-mincursor hovered"
+        src={`/img/produktbilleder/${pic_hovered}_pic-100.webp`}
+        alt="infografik"
+      />
+    </div>
+  </a>
+
+  <div
+    class="bg-beige400 pb-space25 flex items-center flex-col w-[300px] lg:pb-space25"
+  >
+    <h2 class="text-deskH4 font-text mt-space20 font-bold text-grey600">
+      {titel}
+    </h2>
+    <h3 class="text-deskH4 font-text mb-space20 text-grey600">{producent}</h3>
+    <h4 class="text-deskH4 font-text font-bold mb-space20 text-black600">
+      {pris}
+    </h4>
+    <button class="open-button">
+      <Button variant="primary" knapTekst="Tilføj til kurv" kurv={false} />
+    </button>
+  </div>
+  {
+    tilbud == true && (
+      <div class="absolute mr-[150px] mt-space20 text-mobileH1 w-[100px] ">
+        <img src="/img/tilbud.svg" alt="tilbudikon" />
+      </div>
+    )
+  }
+  {
+    udsolgt == true && (
+      <div class="absolute mr-[150px] mt-space20 text-mobileH1 w-[100px] ">
+        <img src="/img/udsolgt.svg" alt="tilbudikon" />
+      </div>
+    )
+  }
+</div>
