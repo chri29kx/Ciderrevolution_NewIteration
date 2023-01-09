@@ -33,7 +33,7 @@ import Banner from "../components/Banner.astro";
           <!-- fornavn  -->
           <div class="mt-space20">
             <label
-              for="fornavn"
+              for="fname"
               class="block mb-[4px] text-sm font-medium text-black500"
             >
               Fornavn<span class="text-red400">*</span>
@@ -41,7 +41,8 @@ import Banner from "../components/Banner.astro";
             <input
               type="text"
               inputmode="text"
-              id="fornavn"
+              id="fname"
+              name="fname"
               class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
               placeholder="Jean-Pierre"
             />
@@ -50,14 +51,15 @@ import Banner from "../components/Banner.astro";
           <!-- efternavn  -->
           <div class="mt-space20">
             <label
-              for="efternavn"
+              for="lname"
               class="block mb-[4px] text-sm font-medium text-black500"
               >Efternavn<span class="text-red400">*</span>
             </label>
             <input
               type="text"
               inputmode="text"
-              id="efternavn"
+              id="lname"
+              name="lname"
               class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
               placeholder="Jørgensen"
             />
@@ -74,6 +76,7 @@ import Banner from "../components/Banner.astro";
               type="text"
               inputmode="text"
               id="land"
+              name="land"
               class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
               placeholder="Danmark"
             />
@@ -82,14 +85,15 @@ import Banner from "../components/Banner.astro";
           <!-- adresse  -->
           <div class="mt-space20">
             <label
-              for="adresse"
+              for="adress"
               class="block mb-[4px] text-sm font-medium text-black500"
               >Adresse<span class="text-red400">*</span>
             </label>
             <input
               type="text"
               inputmode="text"
-              id="adresse"
+              id="adress"
+              name="adress"
               class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
               placeholder="Eks. veksøvej 12, st. th"
             />
@@ -98,14 +102,15 @@ import Banner from "../components/Banner.astro";
           <!-- By  -->
           <div class="mt-space20">
             <label
-              for="by"
+              for="city"
               class="block mb-[4px] text-sm font-medium text-black500"
               >By<span class="text-red400">*</span>
             </label>
             <input
               type="text"
               inputmode="text"
-              id="by"
+              id="city"
+              name="city"
               class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
               placeholder="Eks. Vanløse"
             />
@@ -114,14 +119,15 @@ import Banner from "../components/Banner.astro";
           <!-- postnummer  -->
           <div class="mt-space20">
             <label
-              for="postnummer"
+              for="zip"
               class="block mb-[4px] text-sm font-medium text-black500"
               >Postnummer<span class="text-red400">*</span>
             </label>
             <input
               type="text"
               inputmode="numeric"
-              id="postnummer"
+              id="zip"
+              name="zip"
               class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
               placeholder="Eks. 2720"
             />
