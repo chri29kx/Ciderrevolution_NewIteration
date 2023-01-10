@@ -266,9 +266,9 @@ header {
 .smage-items {
   justify-content: space-between;
   width: 100%;
-  gap: 20px;
+  grid-gap: 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .anbefalede_wrapper {
