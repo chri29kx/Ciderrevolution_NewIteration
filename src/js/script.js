@@ -23,6 +23,7 @@ let number = 0;
 
 window.addEventListener("DOMContentLoaded", (event) => {
   console.log("DOM fully loaded and parsed");
+
   hideLogo();
 
   window.addEventListener("resize", hideLogo);
