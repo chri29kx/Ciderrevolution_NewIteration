@@ -27,6 +27,13 @@ let { title } = Astro.props;
     <script src="../js/script.js"></script>
   </head>
   <body class="bg-beige300 overflow-x-hidden">
+    <!-- spring til indhold  -->
+    <a
+      class="absolute left-[-10%] top-[5%] focus:translate-x-[100%] p-space10 bg-lilac500 ease-in text-white"
+      href="#main"
+    >
+      Spring til indhold</a
+    >
     <!-- over 18 box  -->
 
     <div id="atten_boks">
@@ -88,7 +95,7 @@ let { title } = Astro.props;
     </div>
     <Banner />
     <Header />
-    <main class="mx-space30 sm:mx-spaceMarginx mt-spaceMarginTop">
+    <main id="main" class="mx-space30 sm:mx-spaceMarginx mt-spaceMarginTop">
       <slot />
     </main>
     <FooterCider />
