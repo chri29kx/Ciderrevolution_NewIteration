@@ -110,8 +110,16 @@ import KategoriButton from "../components/KategoriButton.astro";
   </div>
   <button
     class="totopbutton shadow-lg font-text text-lilac100 w-[100px] bg-green300 p-space1 mt-space90"
-    id="top-button">Return to top</button
+    id="top-button"
   >
+    <svg class="ml-[18px]" width="32" height="32" viewBox="0 0 32 32"
+      ><path
+        fill="currentColor"
+        d="M15 27a1 1 0 1 0 2 0h-2Zm2-21a1 1 0 1 0-2 0h2Zm-1-1l.707-.707a1 1 0 0 0-1.414 0L16 5Zm7.293 8.707a1 1 0 0 0 1.414-1.414l-1.414 1.414Zm-16-1.414a1 1 0 1 0 1.414 1.414l-1.414-1.414ZM17 27V6h-2v21h2ZM15.293 5.707l8 8l1.414-1.414l-8-8l-1.414 1.414Zm0-1.414l-8 8l1.414 1.414l8-8l-1.414-1.414Z"
+      ></path>
+    </svg>
+  </button>
+
   <div class="shop_wrapper lg:px-space50 lg:mx-space50">
     <!-- Smagskasser -->
     <div id="smagekasser" class="lg:flex lg:flex-col flex flex-col">
@@ -249,22 +257,22 @@ import KategoriButton from "../components/KategoriButton.astro";
         <Card
           titel="Cidrerie de l’Apothicaire"
           producent="Amzer Zo’"
-          pris="DKK 100"
+          pris="DKK 170"
           pic="fransk_et"
           pic_hovered="alkoholfri_info"
         />
         <Card
-          titel="Cidrerie de l’Apothicaire"
-          producent="Amzer Zo’"
-          pris="DKK 100"
+          titel="La Cidrerie Du Golfe"
+          producent="Hors-Norme"
+          pris="DKK 130"
           pic="fransk_to"
           udsolgt={true}
           pic_hovered="alkoholfri_info"
         />
         <Card
-          titel="Cidrerie de l’Apothicaire"
-          producent="Amzer Zo’"
-          pris="DKK 100"
+          titel="La Cidrerie Du Golfe"
+          producent="P'tite Cuvée"
+          pris="DKK 230"
           pic="fransk_tre"
           pic_hovered="alkoholfri_info"
         />
@@ -284,22 +292,22 @@ import KategoriButton from "../components/KategoriButton.astro";
 
       <div class="smage-items">
         <Card
-          titel="Cidrerie de l’Apothicaire"
-          producent="Amzer Zo’"
-          pris="DKK 100"
+          titel="Bjerregaarden"
+          producent="Quince Cider"
+          pris="DKK 160"
           pic="dansk_et"
           pic_hovered="alkoholfri_info"
         />
         <Card
-          titel="Cidrerie de l’Apothicaire"
-          producent="Amzer Zo’"
-          pris="DKK 100"
+          titel="Langstedgård"
+          producent="Alkymisten"
+          pris="DKK 140"
           pic="dansk_to"
           pic_hovered="alkoholfri_info"
         />
         <Card
-          titel="Cidrerie de l’Apothicaire"
-          producent="Amzer Zo’"
+          titel="Langstedgård"
+          producent="Pæreregn"
           pris="DKK 100"
           pic="dansk_tre"
           pic_hovered="alkoholfri_info"
