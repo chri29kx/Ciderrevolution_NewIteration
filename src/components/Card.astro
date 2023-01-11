@@ -11,7 +11,7 @@ const {
 import Button from "../components/Button.astro";
 ---
 
-<div class="flex items-center flex-col w-[300px]">
+<div class="flex items-center flex-col max-w-[300px] bg-beige400">
   <a id="my-card" href="/singleview">
     <div class="image">
       <img
@@ -28,16 +28,18 @@ import Button from "../components/Button.astro";
   </a>
 
   <div
-    class="bg-beige400 pb-space25 flex items-center flex-col w-[300px] lg:pb-space25"
+    class="pb-space25 gap-[10px] flex items-center justify-center text-center flex-col w-full h-full lg:pb-space25"
   >
     <h2 class="text-deskH4 font-text mt-space20 font-bold text-grey600">
       {titel}
     </h2>
-    <h3 class="text-deskH4 font-text mb-space20 text-grey600">{producent}</h3>
-    <h4 class="text-deskH4 font-text font-bold mb-space20 text-black600">
+    <h3 class="text-deskH4 font-text mt-auto text-grey600">
+      {producent}
+    </h3>
+    <h4 class="text-deskH4 font-text font-bold mt-auto text-black600">
       {pris}
     </h4>
-    <button class="open-button">
+    <button class="open-button flex">
       <Button variant="primary" knapTekst="Tilføj til kurv" kurv={false} />
     </button>
   </div>
