@@ -107,11 +107,14 @@ import Banner from "../components/Banner.astro";
       function togglebackground2() {
         console.log("hejsa2");
         let divTel = document.getElementById("tel_check");
+        let kontakt = document.getElementById("kontakt");
 
         if (divTel.style.backgroundColor === "") {
           divTel.style.backgroundColor = "#D5E8DA";
+          kontakt.classList.add("active123");
         } else {
           divTel.style.backgroundColor = "";
+          kontakt.classList.remove("active123");
         }
       }
 

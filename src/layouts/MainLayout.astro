@@ -27,9 +27,42 @@ let { title } = Astro.props;
     <script src="../js/script.js"></script>
   </head>
   <body class="bg-beige300 overflow-x-hidden">
+    <!-- spring til indhold  -->
+    <a
+      class="absolute left-[-30%] top-[5%] focus:translate-x-[30vw] md:focus:translate-x-[40vw] p-space10 bg-lilac500 ease-in duration-300 text-white"
+      href="#main"
+    >
+      Spring til indhold</a
+    >
     <!-- over 18 box  -->
-
-    <div id="atten_boks">
+    <div
+      id="atten_boks"
+      class="w-screen h-screen bg-lilac200 bg-opacity-90 z-[500] fixed"
+    >
+      <div
+        class="boks rounded-cornerRound text-black500 absolute top-[50%] left-[50%] text-center font-text w-[80vmin] h-[80vmin] ml-[-40vmin] mt-[-40vmin] md:h-[50vmin] md:mt-[-25vmin] bg-lilac100 flex flex-col items-center justify-center gap-space25"
+      >
+        <h1 class="text-mobileH2 md:text-deskH1 font-bold flex flex-wrap">
+          ER DU OVER 18?
+        </h1>
+        <p class="text-mobileH3 md:text-deskH3 flex flex-wrap max-w-[400px]">
+          Er du gammel nok til at drikke fermenteret æblejuice?
+        </p>
+        <div class="atten_buttons flex gap-space25 justify-center">
+          <button
+            id="accept_atten"
+            class="text-mobileH3 knapAtten md:text-deskH3 font-semibold bg-green400 cursor-pointer text-white px-space15 py-[10px] md:px-space40 md:py-space10"
+            >JA</button
+          >
+          <button
+            id="deny_atten"
+            class="knapAtten text-mobileH3 md:text-deskH3 cursor-pointer font-semibold bg-grey300 text-white px-space15 py-[10px] md:px-space40 md:py-space10"
+            >NEJ :-(</button
+          >
+        </div>
+      </div>
+    </div>
+    <!-- <div id="atten_boks">
       <div class="fixed bg-lilac200 w-screen h-screen opacity-[90%]"></div>
       <div
         class="bg-lilac100 z-[1000] top-[40%] md:top-[30%] md:left-[30%] fixed p-space30 shadow-md rounded-cornerRound gap-space80 md:w-[500px] mx-space40"
@@ -54,9 +87,7 @@ let { title } = Astro.props;
           >
         </div>
       </div>
-    </div>
-
-    <script></script>
+    </div> -->
 
     <!-- cookiebox -->
     <div id="cookieboks" class="">
@@ -88,7 +119,7 @@ let { title } = Astro.props;
     </div>
     <Banner />
     <Header />
-    <main class="mx-space30 sm:mx-spaceMarginx mt-spaceMarginTop">
+    <main id="main" class="mx-space30 sm:mx-spaceMarginx mt-spaceMarginTop">
       <slot />
     </main>
     <FooterCider />

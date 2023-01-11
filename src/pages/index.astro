@@ -18,7 +18,7 @@ import Banner from "../components/Banner.astro";
           CIDERREVOLUTION
         </h1>
         <h2 class="text-mobileH2 text-black500 font-text font-semibold">
-          Cider der smager af meget mere
+          En verden af cider
         </h2>
         <div class="w-full flex justify-center">
           <div class="max-w-[400px]">
@@ -37,10 +37,8 @@ import Banner from "../components/Banner.astro";
           </a>
         </div>
         <p class="text-mobileP font-text text-black500 max-w-[550px]">
-          Hos ciderrevolution finder du det bedste cider som Danmark og resten
-          europa har at byde på - og hvis du har lyst til at dykke ned i
-          ciderliteraturen, er du også kommet til det rette sted - vi har nemlig
-          Danmarks største informationsarkiv om cider!
+          Gå på opdagelse i et nøje udvalgt sortiment af europas bedste cidere,
+          eller besøg Ciderskolen - vores samling af ciderliteratur!
         </p>
       </article>
     </div>
@@ -52,13 +50,11 @@ import Banner from "../components/Banner.astro";
           CIDERREVOLUTION
         </h1>
         <h2 class="text-deskH2 font-semibold font-text text-black500">
-          Cider der smager af meget mere
+          En verden af cider
         </h2>
-        <p class="text-mobileP font-text text-black500 max-w-[550px]">
-          Hos ciderrevolution finder du det bedste cider som Danmark og resten
-          europa har at byde på - og hvis du har lyst til at dykke ned i
-          ciderliteraturen, er du også kommet til det rette sted - vi har nemlig
-          Danmarks største informationsarkiv om cider!
+        <p class="text-mobileP font-text text-black500 max-w-[600px]">
+          Gå på opdagelse i et nøje udvalgt sortiment af europas bedste cidere,
+          eller besøg Ciderskolen - vores samling af ciderliteratur!
         </p>
         <div class="cta-btn flex justify-start max-w-[550px]">
           <a href="/shop">
@@ -69,7 +65,7 @@ import Banner from "../components/Banner.astro";
         </div>
       </div>
       <div class="w-full flex items-end">
-        <div class="splash-img max-w-[500px]">
+        <div class="splash-img max-w-[70vmin]">
           <img
             src="../img/splash.svg"
             alt="forsidebillede af Ciderrevolutions logo"
@@ -128,7 +124,7 @@ import Banner from "../components/Banner.astro";
         </p>
         <Button
           href="/ciderskolen"
-          variant="primary"
+          variant="thirdy"
           knapTekst="BESØG CIDERSKOLEN"
           kurv={false}
         />
@@ -143,52 +139,129 @@ import Banner from "../components/Banner.astro";
         >
           Anmeldelser fra vores kunder
         </h3>
-        <div class="flex flex-col gap-space25 lg:flex-row">
-          <div class="maya flex flex-col gap-space10">
-            <h4 class="font-semibold font-text text-mobileH4 text-black500">
-              Maya N.
-            </h4>
-            <p class="font-text text-black500 text-mobileP max-w-[300px]">
-              “Fantastiske cidere og virkelig god service. Ciderrevolutionen var
-              virkelig gode til at hjælpe med at finde den helt rigtige cider.
-              Kan varmt anbefales herfra”
-            </p>
-            <div class="apples_img pt-space10 pb-space20">
+        <div class="flex flex-col gap-space80 lg:gap-space25 lg:flex-row">
+          <div class="pernille flex flex-col gap-space10">
+            <div class="apples_img flex">
               <img
-                src="../img/apples.png"
+                class="max-w-[50px]"
+                src="../img/apple.webp"
+                alt="5 stjerner illustreret som æbler"
+              />
+              <img
+                class="max-w-[50px]"
+                src="../img/apple.webp"
+                alt="5 stjerner illustreret som æbler"
+              />
+              <img
+                class="max-w-[50px]"
+                src="../img/apple.webp"
+                alt="5 stjerner illustreret som æbler"
+              />
+              <img
+                class="max-w-[50px]"
+                src="../img/apple.webp"
+                alt="5 stjerner illustreret som æbler"
+              />
+              <img
+                class="max-w-[50px]"
+                src="../img/apple.webp"
                 alt="5 stjerner illustreret som æbler"
               />
             </div>
-          </div>
-          <div class="pernille flex flex-col gap-space10">
-            <h4 class="font-semibold font-text text-mobileH4 text-black500">
-              Pernille N.
-            </h4>
-            <p class="font-text text-black500 text-mobileP max-w-[300px]">
+
+            <p
+              class="font-text text-black500 text-mobileP max-w-[300px] mb-auto px-space25"
+            >
               “Really good selection of ciders. Perfect for connoisseurs AND
               everyone wanting to know more about the fruity stuff”
             </p>
-            <div class="apples_img pt-space10 pb-space20">
+            <h4
+              class="font-semibold font-text text-mobileH4 text-black500 flex ml-auto"
+            >
+              Pernille N.
+            </h4>
+          </div>
+          <div class="jimmy flex flex-col gap-space10">
+            <div class="apples_img flex">
               <img
-                src="../img/apples.png"
+                class="max-w-[50px]"
+                src="../img/apple.webp"
+                alt="5 stjerner illustreret som æbler"
+              />
+              <img
+                class="max-w-[50px]"
+                src="../img/apple.webp"
+                alt="5 stjerner illustreret som æbler"
+              />
+              <img
+                class="max-w-[50px]"
+                src="../img/apple.webp"
+                alt="5 stjerner illustreret som æbler"
+              />
+              <img
+                class="max-w-[50px]"
+                src="../img/apple.webp"
+                alt="5 stjerner illustreret som æbler"
+              />
+              <img
+                class="max-w-[50px]"
+                src="../img/apple.webp"
                 alt="5 stjerner illustreret som æbler"
               />
             </div>
-          </div>
-          <div class="pernille flex flex-col gap-space10">
-            <h4 class="font-semibold font-text text-mobileH4 text-black500">
+
+            <p
+              class="font-text text-black500 text-mobileP max-w-[300px] mb-auto px-space25"
+            >
+              "Stort udvalg, kompetent betjening, folk der går virkeligt meget
+              op i at gøre Danmark til et cider-land. Virkelig top klasse!"
+            </p>
+            <h4
+              class="font-semibold font-text text-mobileH4 text-black500 flex ml-auto"
+            >
               Jimmy C.
             </h4>
-            <p class="font-text text-black500 text-mobileP max-w-[300px]">
-              "Stort udvalg, kompetent betjening, folk der går virkeligt meget
-              op i at gøre Danmark til et cider-land"
-            </p>
-            <div class="apples_img pt-space10 pb-space20">
+          </div>
+          <div class="maya flex flex-col gap-space10">
+            <div class="apples_img flex">
               <img
-                src="../img/apples.png"
+                class="max-w-[50px]"
+                src="../img/apple.webp"
+                alt="5 stjerner illustreret som æbler"
+              />
+              <img
+                class="max-w-[50px]"
+                src="../img/apple.webp"
+                alt="5 stjerner illustreret som æbler"
+              />
+              <img
+                class="max-w-[50px]"
+                src="../img/apple.webp"
+                alt="5 stjerner illustreret som æbler"
+              />
+              <img
+                class="max-w-[50px]"
+                src="../img/apple.webp"
+                alt="5 stjerner illustreret som æbler"
+              />
+              <img
+                class="max-w-[50px]"
+                src="../img/apple.webp"
                 alt="5 stjerner illustreret som æbler"
               />
             </div>
+
+            <p
+              class="font-text text-black500 text-mobileP max-w-[300px] mb-auto px-space25"
+            >
+              “Fantastiske cidere og virkelig god service. Ciderrevolutionen var
+              virkelig gode til at hjælpe med at finde den rigtige cider"
+            </p>
+            <h4
+              class="font-semibold font-text text-mobileH4 text-black500 flex ml-auto"
+            >
+              Maya N.
+            </h4>
           </div>
         </div>
       </article>
