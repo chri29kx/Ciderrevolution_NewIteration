@@ -184,7 +184,7 @@ header {
   display: block;
   font-size: clamp(1.75rem, 1.3696rem + 1.7391vw, 3rem);
   font-weight: 700;
-  padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+  /* padding: 0.25rem, 0.5vw, 1rem) 0rem; */
   transition: opacity 400ms ease;
 }
 
