@@ -14,138 +14,155 @@ import Banner from "../components/Banner.astro";
   </head>
   <Banner />
   <body class="bg-beige300 overflow-x-hidden">
-    <main
-      class="mx-space30 sm:mx-spaceMarginx mt-spaceMarginTop grid place-content-center mb-space90"
-    >
-      <h1
-        class="lg:text-deskH1 text-mobileH1 font-bold font-text pb-space40 lg:text-center"
+    <body class="bg-beige300">
+      <a
+        class="flex gap-space10 absolute lg:left-[19%] left-[5%]"
+        href="/opret_bruger_login"
       >
-        Opret bruger
-      </h1>
+        <svg width="32" height="32" viewBox="0 0 16 16"
+          ><path
+            fill="none"
+            stroke="#1f1f1f"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+            d="M10.25 3.75L5.75 8l4.5 4.25"></path>
+        </svg>
+        <p class="text-link underline font-medium pt-[5px]">Tilbage</p>
+      </a>
+      <main
+        class="mx-space30 sm:mx-spaceMarginx mt-spaceMarginTop grid place-content-center mb-space90"
+      >
+        <h1
+          class="lg:text-deskH1 text-mobileH1 font-bold font-text pb-space40 lg:text-center"
+        >
+          Opret bruger
+        </h1>
 
-      <form class="grid place-content-center" action="">
-        <!-- fornavn  -->
-        <div class="mt-space20">
-          <label
-            for="fname"
-            class="block mb-[4px] text-sm font-medium text-black500"
-            >Fornavn <span class="text-red400">*</span>
-          </label>
-          <input
-            type="text"
-            inputmode="text"
-            name="fname"
-            id="fname"
-            class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
-            placeholder="Jean-Pierre"
-          />
-        </div>
-
-        <!-- efternavn  -->
-        <div class="mt-space20">
-          <label
-            for="lname"
-            class="block mb-[4px] text-sm font-medium text-black500"
-            >Efternavn <span class="text-red400">*</span>
-          </label>
-          <input
-            type="text"
-            inputmode="text"
-            name="lname"
-            id="lname"
-            class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
-            placeholder="Jørgensen"
-          />
-        </div>
-
-        <!-- Email  -->
-        <div class="mt-space20">
-          <label
-            for="email"
-            class="block mb-[4px] text-sm font-medium text-black500"
-            >Email <span class="text-red400">*</span>
-          </label>
-          <input
-            type="text"
-            inputmode="email"
-            name="Email"
-            id="email"
-            class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
-            placeholder="C-revolution@mail.dk"
-          />
-        </div>
-        <!-- TLF  -->
-        <div class="mt-space20">
-          <label
-            for="tel"
-            class="block mb-[4px] text-sm font-medium text-black500"
-            >Telefon <span class="text-red400">*</span>
-          </label>
-          <input
-            type="tel"
-            inputmode="tel"
-            name="tlf nummer"
-            id="tel"
-            class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
-            placeholder="+45"
-          />
-        </div>
-        <!-- password  -->
-        <div class="mt-space20">
-          <label
-            for="password"
-            class="block mb-[4px] text-sm font-medium text-black500"
-            >Kodeord <span class="text-red400">*</span>
-          </label>
-          <input
-            type="password"
-            inputmode="text"
-            name="password"
-            id="password"
-            class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
-            placeholder="•••••••••"
-            required
-          />
-
-          <!-- gentag password  -->
+        <form class="grid place-content-center" action="">
+          <!-- fornavn  -->
           <div class="mt-space20">
             <label
-              for="gentagpassword"
+              for="fname"
               class="block mb-[4px] text-sm font-medium text-black500"
-              >Gentag kodeord <span class="text-red400">*</span>
+              >Fornavn <span class="text-red400">*</span>
+            </label>
+            <input
+              type="text"
+              inputmode="text"
+              name="fname"
+              id="fname"
+              class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
+              placeholder="Jean-Pierre"
+            />
+          </div>
+
+          <!-- efternavn  -->
+          <div class="mt-space20">
+            <label
+              for="lname"
+              class="block mb-[4px] text-sm font-medium text-black500"
+              >Efternavn <span class="text-red400">*</span>
+            </label>
+            <input
+              type="text"
+              inputmode="text"
+              name="lname"
+              id="lname"
+              class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
+              placeholder="Jørgensen"
+            />
+          </div>
+
+          <!-- Email  -->
+          <div class="mt-space20">
+            <label
+              for="email"
+              class="block mb-[4px] text-sm font-medium text-black500"
+              >Email <span class="text-red400">*</span>
+            </label>
+            <input
+              type="text"
+              inputmode="email"
+              name="Email"
+              id="email"
+              class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
+              placeholder="C-revolution@mail.dk"
+            />
+          </div>
+          <!-- TLF  -->
+          <div class="mt-space20">
+            <label
+              for="tel"
+              class="block mb-[4px] text-sm font-medium text-black500"
+              >Telefon <span class="text-red400">*</span>
+            </label>
+            <input
+              type="tel"
+              inputmode="tel"
+              name="tlf nummer"
+              id="tel"
+              class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
+              placeholder="+45"
+            />
+          </div>
+          <!-- password  -->
+          <div class="mt-space20">
+            <label
+              for="password"
+              class="block mb-[4px] text-sm font-medium text-black500"
+              >Kodeord <span class="text-red400">*</span>
             </label>
             <input
               type="password"
-              id="gentagpassword"
-              name="Gentag password"
+              inputmode="text"
+              name="password"
+              id="password"
               class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
               placeholder="•••••••••"
+              required
             />
-            <!-- checkboks  -->
-            <div class="pt-space15">
-              <input
-                id="checkboks"
-                type="checkbox"
-                class="w-4 h-4 text-black500 bg-gray-100 rounded-[5px] border-grey300 focus:ring-black500 focus:border-black500"
-              />
-              <label
-                for="checkboks"
-                class="ml-2 text-sm font-medium text-black500"
-                >Tilmeld nyhedbrev (Tilbud, nye produkter mm.)</label
-              >
-            </div>
 
-            <div class="pt-space15">
-              <Button
-                variant="primary"
-                href="/hvordan_kontakt"
-                knapTekst="Login"
-                kurv={false}
+            <!-- gentag password  -->
+            <div class="mt-space20">
+              <label
+                for="gentagpassword"
+                class="block mb-[4px] text-sm font-medium text-black500"
+                >Gentag kodeord <span class="text-red400">*</span>
+              </label>
+              <input
+                type="password"
+                id="gentagpassword"
+                name="Gentag password"
+                class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
+                placeholder="•••••••••"
               />
+              <!-- checkboks  -->
+              <div class="pt-space15">
+                <input
+                  id="checkboks"
+                  type="checkbox"
+                  class="w-4 h-4 text-black500 bg-gray-100 rounded-[5px] border-grey300 focus:ring-black500 focus:border-black500"
+                />
+                <label
+                  for="checkboks"
+                  class="ml-2 text-sm font-medium text-black500"
+                  >Tilmeld nyhedbrev (Tilbud, nye produkter mm.)</label
+                >
+              </div>
+
+              <div class="pt-space15">
+                <Button
+                  variant="primary"
+                  href="/hvordan_kontakt"
+                  knapTekst="Login"
+                  kurv={false}
+                />
+              </div>
             </div>
           </div>
-        </div>
-      </form>
-    </main>
+        </form>
+      </main>
+    </body>
   </body>
 </html>

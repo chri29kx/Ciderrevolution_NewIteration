@@ -14,57 +14,74 @@ import Banner from "../components/Banner.astro";
   </head>
   <Banner />
   <body class="bg-beige300 overflow-x-hidden">
-    <main
-      class="mx-space30 sm:mx-spaceMarginx mt-spaceMarginTop grid place-content-center mb-space90 lg:h-[100vh]"
-    >
-      <div class="w-full flex justify-center">
-        <img
-          class="mb-space160"
-          src="../img/p_fem.svg"
-          alt="du er på siden med kontaktinfo"
-        />
-      </div>
-      <h1
-        class="lg:text-deskH1 text-mobileH1 font-bold font-text pb-space10 text-center"
+    <body class="bg-beige300">
+      <a
+        class="flex gap-space10 absolute lg:left-[19%] left-[5%]"
+        href="/note_levering"
       >
-        Vælg Betaling
-      </h1>
-
-      <h2 class="font-bold lg:text-deskH4 flex justify-center underline">
-        520 DKK
-      </h2>
-
-      <section
-        class="md:flex md:gap-space80 md:pt-space160 md:justify-center pb-space80"
+        <svg width="32" height="32" viewBox="0 0 16 16"
+          ><path
+            fill="none"
+            stroke="#1f1f1f"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+            d="M10.25 3.75L5.75 8l4.5 4.25"></path>
+        </svg>
+        <p class="text-link underline font-medium pt-[5px]">Tilbage</p>
+      </a>
+      <main
+        class="mx-space30 sm:mx-spaceMarginx mt-spaceMarginTop grid place-content-center mb-space90"
       >
-        <!-- kort  -->
-        <div class="pt-space40 flex justify-center">
-          <div class="hover:translate-y-[-10px] ease-in-out duration-200">
-            <a tabindex="1" href="/betaling">
-              <div
-                class="w-[170px] h-[170px] grid justify-center hover:cursor-pointer shadow-md rounded-cornerRound"
-              >
-                <img src="../img/korts.svg" alt="Ikon af kort" />
-                <p class="grid justify-center font-medium">Kort betaling</p>
-              </div>
-            </a>
-          </div>
+        <div class="w-full flex justify-center">
+          <img
+            class="mb-space160"
+            src="../img/p_fem.svg"
+            alt="du er på siden med kontaktinfo"
+          />
         </div>
+        <h1
+          class="lg:text-deskH1 text-mobileH1 font-bold font-text pb-space10 text-center"
+        >
+          Vælg Betaling
+        </h1>
 
-        <!-- mobilepay -->
-        <div class="pt-space40 flex justify-center">
-          <div
-            tabindex="2"
-            class="hover:translate-y-[-10px] ease-in-out duration-200"
-          >
-            <div
-              class="w-[170px] h-[170px] flex justify-center hover:cursor-pointer shadow-md rounded-cornerRound"
-            >
-              <img class="w-2/3" src="../img/mp.svg" alt="Mobile_pay" />
+        <h2 class="font-bold lg:text-deskH4 flex justify-center underline">
+          520 DKK
+        </h2>
+
+        <section
+          class="md:flex md:gap-space80 md:pt-space160 md:justify-center pb-space80"
+        >
+          <!-- kort  -->
+          <div class="pt-space40 flex justify-center">
+            <div class="hover:translate-y-[-10px] ease-in-out duration-200">
+              <a tabindex="1" href="/betaling">
+                <div
+                  class="w-[170px] h-[170px] grid justify-center hover:cursor-pointer shadow-md rounded-cornerRound"
+                >
+                  <img src="../img/korts.svg" alt="Ikon af kort" />
+                  <p class="grid justify-center font-medium">Kort betaling</p>
+                </div>
+              </a>
             </div>
           </div>
-        </div>
-      </section>
-    </main>
+
+          <!-- mobilepay -->
+          <div class="pt-space40 flex justify-center">
+            <div
+              tabindex="2"
+              class="hover:translate-y-[-10px] ease-in-out duration-200"
+            >
+              <div
+                class="w-[170px] h-[170px] flex justify-center hover:cursor-pointer shadow-md rounded-cornerRound"
+              >
+                <img class="w-2/3" src="../img/mp.svg" alt="Mobile_pay" />
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </body>
   </body>
 </html>

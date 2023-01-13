@@ -14,134 +14,151 @@ import Banner from "../components/Banner.astro";
   </head>
   <Banner />
   <body class="bg-beige300 overflow-x-hidden">
-    <main class="mx-space30 sm:mx-spaceMarginx mt-spaceMarginTop mb-space90">
-      <div class="w-full flex justify-center">
-        <img
-          class="mb-space160"
-          src="../img/p_tre.svg"
-          alt="du er på siden med kontaktinfo"
-        />
-      </div>
-      <h1
-        class="lg:text-deskH1 text-mobileH1 font-bold font-text pb-space10 text-center"
+    <body class="bg-beige300">
+      <a
+        class="flex gap-space10 absolute lg:left-[19%] left-[5%]"
+        href="/vaelglevering"
       >
-        Leverings info
-      </h1>
-      <!-- inmput felter  -->
-      <section class="grid place-content-center">
-        <form class="w-[380px]" action="">
-          <!-- fornavn  -->
-          <div class="mt-space20">
-            <label
-              for="fname"
-              class="block mb-[4px] text-sm font-medium text-black500"
-            >
-              Fornavn<span class="text-red400">*</span>
-            </label>
-            <input
-              type="text"
-              inputmode="text"
-              id="fname"
-              name="fname"
-              class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
-              placeholder="Jean-Pierre"
-            />
-          </div>
-
-          <!-- efternavn  -->
-          <div class="mt-space20">
-            <label
-              for="lname"
-              class="block mb-[4px] text-sm font-medium text-black500"
-              >Efternavn<span class="text-red400">*</span>
-            </label>
-            <input
-              type="text"
-              inputmode="text"
-              id="lname"
-              name="lname"
-              class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
-              placeholder="Jørgensen"
-            />
-          </div>
-
-          <!-- land  -->
-          <div class="mt-space20">
-            <label
-              for="land"
-              class="block mb-[4px] text-sm font-medium text-black500"
-              >Land<span class="text-red400">*</span>
-            </label>
-            <input
-              type="text"
-              inputmode="text"
-              id="land"
-              name="land"
-              class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
-              placeholder="Danmark"
-            />
-          </div>
-
-          <!-- adresse  -->
-          <div class="mt-space20">
-            <label
-              for="adress"
-              class="block mb-[4px] text-sm font-medium text-black500"
-              >Adresse<span class="text-red400">*</span>
-            </label>
-            <input
-              type="text"
-              inputmode="text"
-              id="adress"
-              name="adress"
-              class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
-              placeholder="Eks. veksøvej 12, st. th"
-            />
-          </div>
-
-          <!-- By  -->
-          <div class="mt-space20">
-            <label
-              for="city"
-              class="block mb-[4px] text-sm font-medium text-black500"
-              >By<span class="text-red400">*</span>
-            </label>
-            <input
-              type="text"
-              inputmode="text"
-              id="city"
-              name="city"
-              class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
-              placeholder="Eks. Vanløse"
-            />
-          </div>
-
-          <!-- postnummer  -->
-          <div class="mt-space20">
-            <label
-              for="zip"
-              class="block mb-[4px] text-sm font-medium text-black500"
-              >Postnummer<span class="text-red400">*</span>
-            </label>
-            <input
-              type="text"
-              inputmode="numeric"
-              id="zip"
-              name="zip"
-              class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
-              placeholder="Eks. 2720"
-            />
-          </div>
-        </form>
-        <div class="pt-space20">
-          <Button
-            variant="primary"
-            href="/note_levering"
-            knapTekst="Godkend"
-            kurv={false}
+        <svg width="32" height="32" viewBox="0 0 16 16"
+          ><path
+            fill="none"
+            stroke="#1f1f1f"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+            d="M10.25 3.75L5.75 8l4.5 4.25"></path>
+        </svg>
+        <p class="text-link underline font-medium pt-[5px]">Tilbage</p>
+      </a>
+      <main class="mx-space30 sm:mx-spaceMarginx mt-spaceMarginTop mb-space90">
+        <div class="w-full flex justify-center">
+          <img
+            class="mb-space160"
+            src="../img/p_tre.svg"
+            alt="du er på siden med kontaktinfo"
           />
         </div>
-      </section>
-    </main>
+        <h1
+          class="lg:text-deskH1 text-mobileH1 font-bold font-text pb-space10 text-center"
+        >
+          Leverings info
+        </h1>
+        <!-- inmput felter  -->
+        <section class="grid place-content-center">
+          <form class="w-[380px]" action="">
+            <!-- fornavn  -->
+            <div class="mt-space20">
+              <label
+                for="fname"
+                class="block mb-[4px] text-sm font-medium text-black500"
+              >
+                Fornavn<span class="text-red400">*</span>
+              </label>
+              <input
+                type="text"
+                inputmode="text"
+                id="fname"
+                name="fname"
+                class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
+                placeholder="Jean-Pierre"
+              />
+            </div>
+
+            <!-- efternavn  -->
+            <div class="mt-space20">
+              <label
+                for="lname"
+                class="block mb-[4px] text-sm font-medium text-black500"
+                >Efternavn<span class="text-red400">*</span>
+              </label>
+              <input
+                type="text"
+                inputmode="text"
+                id="lname"
+                name="lname"
+                class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
+                placeholder="Jørgensen"
+              />
+            </div>
+
+            <!-- land  -->
+            <div class="mt-space20">
+              <label
+                for="land"
+                class="block mb-[4px] text-sm font-medium text-black500"
+                >Land<span class="text-red400">*</span>
+              </label>
+              <input
+                type="text"
+                inputmode="text"
+                id="land"
+                name="land"
+                class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
+                placeholder="Danmark"
+              />
+            </div>
+
+            <!-- adresse  -->
+            <div class="mt-space20">
+              <label
+                for="adress"
+                class="block mb-[4px] text-sm font-medium text-black500"
+                >Adresse<span class="text-red400">*</span>
+              </label>
+              <input
+                type="text"
+                inputmode="text"
+                id="adress"
+                name="adress"
+                class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
+                placeholder="Eks. veksøvej 12, st. th"
+              />
+            </div>
+
+            <!-- By  -->
+            <div class="mt-space20">
+              <label
+                for="city"
+                class="block mb-[4px] text-sm font-medium text-black500"
+                >By<span class="text-red400">*</span>
+              </label>
+              <input
+                type="text"
+                inputmode="text"
+                id="city"
+                name="city"
+                class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
+                placeholder="Eks. Vanløse"
+              />
+            </div>
+
+            <!-- postnummer  -->
+            <div class="mt-space20">
+              <label
+                for="zip"
+                class="block mb-[4px] text-sm font-medium text-black500"
+                >Postnummer<span class="text-red400">*</span>
+              </label>
+              <input
+                type="text"
+                inputmode="numeric"
+                id="zip"
+                name="zip"
+                class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
+                placeholder="Eks. 2720"
+              />
+            </div>
+          </form>
+          <div class="pt-space20">
+            <Button
+              variant="primary"
+              href="/note_levering"
+              knapTekst="Godkend"
+              kurv={false}
+            />
+          </div>
+        </section>
+      </main>
+    </body>
   </body>
 </html>
