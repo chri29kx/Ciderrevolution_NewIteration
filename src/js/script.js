@@ -101,37 +101,32 @@ aTags.forEach(function (aTag) {
   });
 });
 
-// Nav forsvinder og kategorier bliver sticky
+// Return to top button
+// Først henter vi reference til det element, vi vil arbejde med
+const otherStickyElement = document.getElementById("filter");
 
-// Først henter vi referencer til de to elementer, vi vil arbejde med
-var stickyElement = document.getElementById("my-header");
-var otherStickyElement = document.getElementById("filter");
-
-// Derefter definerer vi en funktion, der tjekker om "otherStickyElement" har nået toppen af visningsområdet
+// Derefter definerer vi en funktion, der tjekker om "#filter" har nået toppen af viewporten
 function isOtherStickyElementAtTopOfViewport() {
-  // Vi bruger getBoundingClientRect() metoden til at få den aktuelle position og størrelse af "otherStickyElement"
+  // Vi bruger getBoundingClientRect() metoden til at få den aktuelle position og størrelse af "#filter"
   var rect = otherStickyElement.getBoundingClientRect();
-
-  // Vi tjekker om toppen af "otherStickyElement" er på eller ovenfor toppen af visningsområdet
+  // Vi tjekker om toppen af "#filter" er ved toppen af viewporten
   return rect.top <= 0;
 }
 
-// Vi definerer en funktion, der gør "stickyElement" sticky, indtil "otherStickyElement" bliver sticky
-function makeStickyUntilOtherElementIsSticky() {
-  // Først tjekker vi om "otherStickyElement" har nået toppen af visningsområdet
+// Dernæst definerer vi en funktion der har til formål at enten tilføje eller fjerne en klasse fra vores topButton-element
+function addVisibleIfSticky() {
+  // Vi bruger en if else statement til at bestemme hvornår topButton skal vises på siden
   if (isOtherStickyElementAtTopOfViewport()) {
-    // Hvis "otherStickyElement" er i toppen af visningsområdet, fjerner vi "sticky" klassen fra "stickyElement" og tilføjer "visible" klassen til "top-button"
-    stickyElement.classList.remove("nysticky");
+    // Hvis "#filter" er i toppen af viewporten tilføjes klassen "visible" til topButton
     topButton.classList.add("visible");
   } else {
-    // Hvis "otherStickyElement" ikke er i toppen af visningsområdet, tilføjer vi "sticky" klassen til "stickyElement" og fjerner "visible" klassen fra "top-button"
-    stickyElement.classList.add("nysticky");
+    // Hvis "#filter" ikke er i toppen af viewporten fjernes klassen "visible" fra topButton
     topButton.classList.remove("visible");
   }
 }
 
-// Til sidst tilføjer vi "makeStickyUntilOtherElementIsSticky" funktionen til vinduets "scroll" event
-window.addEventListener("scroll", makeStickyUntilOtherElementIsSticky);
+// Til sidst tilføjer vi "addVisibleIfSticky" funktionen til vinduets "scroll" event
+window.addEventListener("scroll", addVisibleIfSticky);
 
 //Modal script
 //Vi lytter på alle knapper med elementer med klassen .open-button
