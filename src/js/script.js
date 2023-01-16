@@ -21,13 +21,16 @@ const closeModal2 = document.querySelector(".close-button2");
 const openModals = document.querySelectorAll(".open-button");
 let number = 0;
 
+//tjek at dommen er loaded før script køres
 window.addEventListener("DOMContentLoaded", (event) => {
   console.log("DOM fully loaded and parsed");
 
   hideLogo();
 
+  //lytter til om viewport ændrer sig og kører funktionen hideLogo hvis den gør
   window.addEventListener("resize", hideLogo);
 
+  //lytter til klik på burger-menu
   toggleButton.addEventListener("click", () => {
     nav2.classList.toggle("open");
     toggleButton.classList.toggle("x");
