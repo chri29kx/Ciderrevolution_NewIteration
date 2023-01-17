@@ -21,22 +21,30 @@ const closeModal2 = document.querySelector(".close-button2");
 const openModals = document.querySelectorAll(".open-button");
 let number = 0;
 
+//tjek at dommen er loaded før script køres
 window.addEventListener("DOMContentLoaded", (event) => {
   console.log("DOM fully loaded and parsed");
 
   hideLogo();
 
+  //lytter til om viewport ændrer sig og kører funktionen hideLogo hvis den gør
   window.addEventListener("resize", hideLogo);
 
+  //lytter til klik på burger-menu
   toggleButton.addEventListener("click", () => {
+    //burger menuen bliver vist med classen "open" som toggles ved klik
     nav2.classList.toggle("open");
+
+    //burger-menu-icon-animation til x
     toggleButton.classList.toggle("x");
 
+    //funktion som fjerner logo ved åbnet burger-menu
     hideLogo();
     overflowThing();
   });
 
   function hideLogo() {
+    // hvis burger-menuen indeholder classen "open" ELLER viewport-størrelsen er under 600px i bredden, skjules logoet
     if (
       nav2.classList.contains("open") ||
       window.matchMedia("(max-width: 600px)").matches
@@ -47,6 +55,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     }
   }
 
+  //sørger for at der ikke kan scrolles i åben burger-menu
   function overflowThing() {
     if (nav2.classList.contains("open")) {
       html.style.overflowY = "hidden";
@@ -57,7 +66,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
     }
   }
 
+  // lytter til klik på minus-knap
   minusButton.addEventListener("click", () => {
+    //hvis variabel "number" er 0 gøres intet. hvis variablen = 1 eller over 1, fratrækkes 1
     if (number === 0) {
       return;
     }
@@ -66,6 +77,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   });
 
   plusButton.addEventListener("click", () => {
+    //ved klik adderes der med 1
     number++;
     numberElement.textContent = number.toString();
   });
