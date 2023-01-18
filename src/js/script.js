@@ -157,7 +157,9 @@ closeModal2.addEventListener("click", () => {
   modal.close();
 });
 
+// lytter til klik på minus-knap
 minusButtonShop.addEventListener("click", () => {
+  //hvis variabel "number" er 0 gøres intet. hvis variablen = 1 eller over 1, fratrækkes 1
   if (number === 0) {
     return;
   }
@@ -166,6 +168,7 @@ minusButtonShop.addEventListener("click", () => {
 });
 
 plusButtonShop.addEventListener("click", () => {
+  //ved klik adderes der med 1
   number++;
   numberElementShop.textContent = number.toString();
 });
